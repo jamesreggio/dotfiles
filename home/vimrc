@@ -1,0 +1,110 @@
+set nocompatible
+
+" Mac OS X bug
+filetype on
+filetype off
+
+" Plugins
+call pathogen#infect()
+filetype plugin indent on
+syntax on
+
+" Colors
+colo black
+"colo dark
+"colo blue
+"colo macvim
+
+" Indentdation
+set tabstop=2
+set shiftwidth=2 softtabstop=2
+set smarttab
+set expandtab
+set smartindent
+
+" Wrapping
+set wrap
+set linebreak
+
+" Invisibles
+set list
+set listchars=tab:»»,trail:•
+set linebreak
+set showbreak=↳
+
+" Search
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+runtime macros/matchit.vim
+
+" Completion
+inoremap <Nul> <C-x><C-o>
+set completeopt+=longest
+
+" Navigation
+map <down> <nop>
+map <left> <nop>
+map <right> <nop>
+map <up> <nop>
+
+" Windows
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
+
+" Leaders
+nmap <leader>q :q<cr>
+nmap <leader>w :w<cr>
+nmap <leader>n :NERDTreeToggle<cr>
+nmap <leader>u :GundoToggle<cr>
+nmap <leader>f :Ack 
+nmap <leader>/ :let @/ = ""<cr>
+nmap <leader>t :FuzzyFinderTextMate<cr>
+nmap <leader>r :ruby @finder = nil<cr>
+nmap <leader>0 :call ToggleColorColumn()<cr>
+nmap <leader>1 :call SplitNVertical(1, 79)<cr>
+nmap <leader>2 :call SplitNVertical(2, 79)<cr>
+nmap <leader>3 :call SplitNVertical(3, 79)<cr>
+
+" Scrolling
+set ruler
+set scrolloff=3
+
+" Undo
+if version >= 703
+  set undodir=~/.vim/undodir
+  set undofile
+  set undolevels=1000
+  set undoreload=10000
+endif
+
+" Other
+set visualbell t_vb=
+set modelines=0
+
+" Set window width to support n splits with standard line length
+function! SplitNVertical(nSplits, width)
+  let &columns = (a:width + 1) * a:nSplits - 1
+  execute "normal \<C-w>="
+endfunction
+
+" Toggle colorcolumn to indicate standard line length
+function! ToggleColorColumn()
+  if &colorcolumn > 0
+    set colorcolumn=
+  else
+    set colorcolumn=80
+  endif
+endfunction
+
+" Gist: copy URL to clipboard
+let g:gist_clip_command='pbcopy'
+
+" FuzzyFinder: ignore files
+let g:fuzzy_ignore='*.png;*.jpg;*.gif;*bmp;*.o;*.class;*.sassc'
+
+" NERDTree: ignore files
+let NERDTreeIgnore=['\~$']

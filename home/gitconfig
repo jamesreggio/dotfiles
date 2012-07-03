@@ -1,0 +1,39 @@
+[core]
+	editor = vim
+	excludesfile = ~/.gitignore
+[user]
+	name = James Reggio
+	email = james.reggio@gmail.com
+[github]
+	user = jamesreggio
+	token = a295220ea622f3e956da20d8c7da9a74
+[diff]
+	tool = Kaleidoscope
+[difftool]
+	prompt = false
+[difftool "Kaleidoscope"]
+	cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
+[color]
+	ui = true
+[alias]
+	b = branch
+	co = checkout
+	ci = commit
+	d = diff
+	ds = diff --stat
+	dt = difftool
+	dc = diff --cached
+	dsc = diff --stat --cached
+	dtc = difftool --cached
+	f = fetch -p
+	l = log --decorate
+	lo = log --oneline --decorate
+	m = merge
+	man = help
+	p = push --mirror
+	s = status --short --branch
+	sm = submodule
+	sta = stash apply
+	stl = stash list
+	stp = stash pop
+	sts = stash save

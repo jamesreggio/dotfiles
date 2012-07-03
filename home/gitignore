@@ -1,0 +1,7 @@
+*~
+*.swo
+*.swp
+.DS_Store
+.sass-cache
+Session.vim
+Thumbs.db

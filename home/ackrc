@@ -1,0 +1,9 @@
+--text
+--nolog
+--type-set=coffee=.coffee
+--type-set=jade=.jade
+--type-set=log=.log
+--type-set=sass=.sass
+--ignore-dir=.sass-cache
+--ignore-dir=node_modules
+--ignore-dir=vcr_cassettes

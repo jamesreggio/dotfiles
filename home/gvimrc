@@ -1,0 +1,21 @@
+" Indentation
+inoremap <C-space> <C-x><C-o>
+
+" Scrolling
+set guioptions-=l
+set guioptions-=r
+set guioptions-=L
+set guioptions-=R
+set guioptions-=T
+
+" Highlight word under cursor
+set updatetime=500
+hi CursorToken guibg=#242424
+autocmd CursorHold * silent! exe printf('match CursorToken /\<%s\>/', escape(expand('<cword>'), '\'))
+autocmd CursorMoved * match none
+
+" Open in fullscreen
+"if has("gui_running")
+"  set fuoptions=maxvert,maxhorz
+"  au GUIEnter * set fullscreen
+"endif
