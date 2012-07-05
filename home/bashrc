@@ -41,8 +41,8 @@ if [ -n "$color_prompt" ]; then
     eval `dircolors -b`
     alias ls='ls --color=auto'
   else
-    CLICOLOR=1
-    LSCOLORS=ExFxCxDxBxegedabagacad
+    export CLICOLOR=1
+    export LSCOLORS=ExFxCxDxBxegedabagacad
   fi
 
   # grep
