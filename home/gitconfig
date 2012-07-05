@@ -31,7 +31,7 @@
 	m = merge
 	man = help
 	p = push --mirror
-	s = status --short --branch
+	s = status --short
 	sm = submodule
 	sta = stash apply
 	stl = stash list

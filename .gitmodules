@@ -52,3 +52,6 @@
 [submodule "home/vim/bundle/textobj-user"]
 	path = home/vim/bundle/textobj-user
 	url = git://github.com/kana/vim-textobj-user.git
+[submodule "home/vim/bundle/webapi"]
+	path = home/vim/bundle/webapi
+	url = https://github.com/mattn/webapi-vim.git

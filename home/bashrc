@@ -1,0 +1,50 @@
+# Interactivity check
+[ -z "$PS1" ] && return
+
+# History
+shopt -s histappend
+HISTCONTROL=ignoredups:ignorespace
+HISTSIZE=1000
+HISTFILESIZE=2000
+
+# Environment
+[ -n "$(which rbenv)" ] && eval `rbenv init -`
+[ -x /usr/bin/lesspipe ] && eval `SHELL=/bin/sh lesspipe`
+[ -x /etc/bash_completion ] && ! shopt -oq posix && source /etc/bash_completion
+[ -x ~/.bash_aliases ] && source ~/.bash_aliases
+
+# Color
+case "$TERM" in
+  xterm-color) color_prompt=yes;;
+  xterm-256color) color_prompt=yes;;
+  *)
+    if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
+      # We have color support; assume it's compliant with Ecma-48
+      # (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+      # a case would tend to support setf rather than setaf.)
+      color_prompt=yes
+    fi
+  ;;
+esac
+
+if [ -n "$color_prompt" ]; then
+  # Prompt
+  PS1='\n\[\033[0;32m\]\h\[\033[0;0m\] : \[\033[1;34m\]\w\[\033[0;0m\]\n\[\033[0;35m\]\$\[\033[0;0m\] '
+  PS2='\[\033[0;35m\]>\[\033[0;0m\] '
+
+  # ls
+  if [ -x /usr/bin/dircolors ]; then
+    eval `dircolors -b`
+    alias ls='ls --color=auto'
+  else
+    CLICOLOR=1
+    LSCOLORS=ExFxCxDxBxegedabagacad
+  fi
+
+  # grep
+  alias grep='grep --color=auto'
+  alias fgrep='fgrep --color=auto'
+  alias egrep='egrep --color=auto'
+fi
+
+unset color_prompt

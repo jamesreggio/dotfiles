@@ -1,0 +1,4 @@
+alias l='ls -CF'
+alias ll='ls -alF'
+alias la='ls -A'
+[ -n "$(which ack-grep)" ] && alias ack='ack-grep'

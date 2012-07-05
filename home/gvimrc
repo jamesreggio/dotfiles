@@ -1,5 +1,8 @@
-" Indentation
-inoremap <C-space> <C-x><C-o>
+" Colors
+colo black
+"colo dark
+"colo blue
+"colo macvim
 
 " Scrolling
 set guioptions-=l
@@ -7,6 +10,20 @@ set guioptions-=r
 set guioptions-=L
 set guioptions-=R
 set guioptions-=T
+
+" Completion
+inoremap <C-space> <C-x><C-o>
+
+" Other
+set visualbell t_vb=
+
+" Leaders
+nmap <leader>u :GundoToggle<cr>
+nmap <leader>r :ruby @finder = nil<cr>
+nmap <leader>t :FuzzyFinderTextMate<cr>
+
+" FuzzyFinder
+let g:fuzzy_ignore='*.png;*.jpg;*.gif;*bmp;*.o;*.class;*.sassc'
 
 " Highlight word under cursor
 set updatetime=500
