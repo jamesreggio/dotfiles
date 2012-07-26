@@ -55,3 +55,6 @@
 [submodule "home/vim/bundle/webapi"]
 	path = home/vim/bundle/webapi
 	url = https://github.com/mattn/webapi-vim.git
+[submodule "home/vim/bundle/proto"]
+	path = home/vim/bundle/proto
+	url = https://github.com/brandonbloom/vim-proto.git
