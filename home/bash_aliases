@@ -2,3 +2,12 @@ alias l='ls -CF'
 alias ll='ls -alF'
 alias la='ls -A'
 [ -n "$(which ack-grep)" ] && alias ack='ack-grep'
+
+if [ "$(hostname)" = "jreggio-wsl" ]; then
+  alias ant='./ant'
+  alias B='cd $HOME/dev/sf1/app/main/core/build'
+  alias C='cd $HOME/dev/sf1/app/main/core'
+  function crep() {
+    csearch "$1" | grep "$1"
+  }
+fi
