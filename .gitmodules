@@ -58,3 +58,6 @@
 [submodule "home/vim/bundle/proto"]
 	path = home/vim/bundle/proto
 	url = https://github.com/brandonbloom/vim-proto.git
+[submodule "home/vim/bundle/localvimrc"]
+	path = home/vim/bundle/localvimrc
+	url = https://github.com/embear/vim-localvimrc.git
