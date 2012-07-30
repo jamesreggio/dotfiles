@@ -61,3 +61,6 @@
 [submodule "home/vim/bundle/localvimrc"]
 	path = home/vim/bundle/localvimrc
 	url = https://github.com/embear/vim-localvimrc.git
+[submodule "home/vim/bundle/csearch"]
+	path = home/vim/bundle/csearch
+	url = https://github.com/brandonbloom/csearch.vim.git
