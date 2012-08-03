@@ -7,12 +7,6 @@ HISTCONTROL=ignoredups:ignorespace
 HISTSIZE=1000
 HISTFILESIZE=2000
 
-# Environment
-[ -n "$(which rbenv)" ] && eval `rbenv init -`
-[ -x /usr/bin/lesspipe ] && eval `SHELL=/bin/sh lesspipe`
-[ -x /etc/bash_completion ] && ! shopt -oq posix && source /etc/bash_completion
-[ -x ~/.bash_aliases ] && source ~/.bash_aliases
-
 # Color
 case "$TERM" in
   xterm-color) color_prompt=yes;;
@@ -52,3 +46,14 @@ if [ -n "$color_prompt" ]; then
 fi
 
 unset color_prompt
+
+# Environment
+[ -n "$(which rbenv)" ] && eval `rbenv init -`
+[ -x /usr/bin/lesspipe ] && eval `SHELL=/bin/sh lesspipe`
+[ -x /etc/bash_completion ] && ! shopt -oq posix && source /etc/bash_completion
+[ -x ~/.bash_aliases ] && source ~/.bash_aliases
+
+# Unix does not pass this from the login enviroment to individual shells.
+if [ "$(hostname)" = "jreggio-wsl" ]; then
+  export LD_LIBRARY_PATH=$ORACLE_HOME/client/lib
+fi
