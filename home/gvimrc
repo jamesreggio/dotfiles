@@ -32,7 +32,7 @@ autocmd CursorHold * silent! exe printf('match CursorToken /\<%s\>/', escape(exp
 autocmd CursorMoved * match none
 
 " Open in fullscreen
-"if has("gui_running")
+"if has('gui_running')
 "  set fuoptions=maxvert,maxhorz
 "  au GUIEnter * set fullscreen
 "endif

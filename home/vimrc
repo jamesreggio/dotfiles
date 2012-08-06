@@ -71,7 +71,7 @@ nmap <leader>w :w<cr>
 nmap <leader>q :q<cr>
 nmap <leader>f :Ack 
 nmap <leader>n :NERDTreeToggle<cr>
-nmap <leader>/ :let @/ = ""<cr>
+nmap <leader>/ :let @/=''<cr>
 nmap <leader>0 :call ToggleColorColumn()<cr>
 nmap <leader>1 :call SplitNVertical(1, 79)<cr>
 nmap <leader>2 :call SplitNVertical(2, 79)<cr>
@@ -79,7 +79,7 @@ nmap <leader>3 :call SplitNVertical(3, 79)<cr>
 
 " Ack
 if !has('mac')
-  let g:ackprg="ack-grep -H --nocolor --nogroup --column"
+  let g:ackprg='ack-grep -H --nocolor --nogroup --column'
 endif
 
 " Gist
@@ -107,6 +107,6 @@ endfunction
 
 " Set window width to support n splits with standard line length
 function! SplitNVertical(nSplits, width)
-  let &columns = (a:width + 1) * a:nSplits - 1
-  execute "normal \<C-w>="
+  let &columns=(a:width + 1) * a:nSplits - 1
+  execute 'normal \<C-w>='
 endfunction
