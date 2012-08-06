@@ -69,6 +69,7 @@ set modelines=0
 nmap <leader>w :w<cr>
 nmap <leader>q :q<cr>
 nmap <leader>f :Ack 
+nmap <leader>g :CSearch 
 nmap <leader>n :NERDTreeToggle<cr>
 nmap <leader>/ :let @/=''<cr>
 nmap <leader>0 :call ToggleColorColumn()<cr>
@@ -89,6 +90,9 @@ if has('mac')
 elseif has('unix')
   let g:gist_clip_command='xclip -selection clipboard'
 endif
+
+" Local .vimrc
+let g:localvimrc_whitelist='^/home/jreggio'
 
 " NERDTree
 let NERDTreeIgnore=['\~$']
