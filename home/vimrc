@@ -41,7 +41,6 @@ set hlsearch
 set incsearch
 set ignorecase
 set smartcase
-runtime macros/matchit.vim
 
 " Completion
 inoremap <Nul> <C-x><C-o>
@@ -101,6 +100,16 @@ function! ToggleColorColumn()
       set colorcolumn=
     else
       set colorcolumn=80
+    endif
+  else
+    if !exists('w:columnmatch')
+      let w:columnmatch=-1
+    endif
+    if w:columnmatch >= 0
+      call matchdelete(w:columnmatch)
+      let w:columnmatch=-1
+    else
+      let w:columnmatch=matchadd('ErrorMsg', '\%>79v.\+')
     endif
   endif
 endfunction
