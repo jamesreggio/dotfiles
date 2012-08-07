@@ -64,3 +64,9 @@
 [submodule "home/vim/bundle/csearch"]
 	path = home/vim/bundle/csearch
 	url = https://github.com/brandonbloom/csearch.vim.git
+[submodule "home/vim/bundle/genutils"]
+	path = home/vim/bundle/genutils
+	url = https://github.com/vim-scripts/genutils.git
+[submodule "home/vim/bundle/perforce"]
+	path = home/vim/bundle/perforce
+	url = https://github.com/vim-scripts/perforce.git

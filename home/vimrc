@@ -97,6 +97,10 @@ let g:localvimrc_whitelist='^/home/jreggio'
 " NERDTree
 let NERDTreeIgnore=['\~$']
 
+" Perforce
+let g:p4Presets='P4CONFIG'
+let g:p4EnableActiveStatus=0
+
 " Toggle colorcolumn to indicate standard line length
 function! ToggleColorColumn()
   if exists('+colorcolumn')
