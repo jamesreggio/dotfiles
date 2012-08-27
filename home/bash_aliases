@@ -1,6 +1,7 @@
 alias l='ls -CF'
-alias ll='ls -alF'
-alias la='ls -A'
+alias la='ls -CFA'
+alias ll='ls -lF'
+alias lla='ls -lFA'
 [ -n "$(which ack-grep)" ] && alias ack='ack-grep'
 [ -n "$(which colordiff)" ] && alias diff='colordiff'
 
