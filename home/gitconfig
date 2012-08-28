@@ -6,7 +6,6 @@
 	email = james.reggio@gmail.com
 [github]
 	user = jamesreggio
-	token = a295220ea622f3e956da20d8c7da9a74
 [diff]
 	tool = Kaleidoscope
 [difftool]
@@ -14,7 +13,7 @@
 [difftool "Kaleidoscope"]
 	cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
 [color]
-	ui = true
+	ui = auto
 [alias]
 	b = branch
 	co = checkout
@@ -31,7 +30,7 @@
 	m = merge
 	man = help
 	p = push --mirror
-	s = status --short
+	s = status --short --branch
 	sm = submodule
 	sta = stash apply
 	stl = stash list
