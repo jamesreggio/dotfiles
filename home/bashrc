@@ -53,7 +53,8 @@ unset color_prompt
 [ -x /etc/bash_completion ] && ! shopt -oq posix && source /etc/bash_completion
 [ -x ~/.bash_aliases ] && source ~/.bash_aliases
 
-# Unix does not pass this from the login enviroment to individual shells.
 if [ "$(hostname)" = "jreggio-wsl" ]; then
+  # Unix does not pass this from the login enviroment to individual shells.
   export LD_LIBRARY_PATH=$ORACLE_HOME/client/lib
+  source ~/dev/feed/bootstrap.sh
 fi
