@@ -47,10 +47,15 @@ fi
 
 unset color_prompt
 
+# Completion
+completion=/etc/bash_completion
+[ -x "$(which brew)" ] && completion=$(brew --prefix)$completion
+! shopt -oq posix && source $completion
+unset completion
+
 # Environment
 [ -x "$(which rbenv)" ] && eval `rbenv init -`
 [ -x /usr/bin/lesspipe ] && eval `SHELL=/bin/sh lesspipe`
-[ -x /etc/bash_completion ] && ! shopt -oq posix && source /etc/bash_completion
 [ -x ~/.bash_aliases ] && source ~/.bash_aliases
 
 case "$(hostname -s)" in
