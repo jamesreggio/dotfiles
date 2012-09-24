@@ -6,10 +6,14 @@ colo black
 
 " Scrolling
 set guioptions-=l
-set guioptions-=r
 set guioptions-=L
+set guioptions-=r
 set guioptions-=R
+
+" Chrome
+set guioptions-=m
 set guioptions-=T
+set guioptions-=e
 
 " Completion
 inoremap <C-space> <C-x><C-o>
