@@ -92,7 +92,7 @@ elseif has('unix')
 endif
 
 " Local .vimrc
-let g:localvimrc_whitelist='^/home/jreggio'
+let g:localvimrc_whitelist=expand('^$HOME/')
 
 " NERDTree
 let NERDTreeIgnore=['\~$']

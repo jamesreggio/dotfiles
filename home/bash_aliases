@@ -2,8 +2,8 @@ alias l='ls -CF'
 alias la='ls -CFA'
 alias ll='ls -lF'
 alias lla='ls -lFA'
-[ -n "$(which ack-grep)" ] && alias ack='ack-grep'
-[ -n "$(which colordiff)" ] && alias diff='colordiff'
+[ -x "$(which ack-grep)" ] && alias ack='ack-grep'
+[ -x "$(which colordiff)" ] && alias diff='colordiff'
 
 if [ "$(hostname)" = "jreggio-wsl" ]; then
   alias ant='./ant'

@@ -27,7 +27,7 @@ nmap <leader>r :ruby @finder = nil<cr>
 nmap <leader>t :FuzzyFinderTextMate<cr>
 
 " FuzzyFinder
-let g:fuzzy_ignore='*.png;*.jpg;*.gif;*bmp;*.o;*.class;*.sassc'
+let g:fuzzy_ignore='*.png;*.jpg;*.gif;*bmp;*.o;*.class'
 
 " Highlight word under cursor
 set updatetime=500

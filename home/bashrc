@@ -48,13 +48,18 @@ fi
 unset color_prompt
 
 # Environment
-[ -n "$(which rbenv)" ] && eval `rbenv init -`
+[ -x "$(which rbenv)" ] && eval `rbenv init -`
 [ -x /usr/bin/lesspipe ] && eval `SHELL=/bin/sh lesspipe`
 [ -x /etc/bash_completion ] && ! shopt -oq posix && source /etc/bash_completion
 [ -x ~/.bash_aliases ] && source ~/.bash_aliases
 
-if [ "$(hostname)" = "jreggio-wsl" ]; then
-  # Unix does not pass this from the login enviroment to individual shells.
-  export LD_LIBRARY_PATH=$ORACLE_HOME/client/lib
-  source ~/dev/feed/bootstrap.sh
-fi
+case "$(hostname -s)" in
+  jreggio-wsl)
+    # Unix does not pass this from the login enviroment to individual shells.
+    export LD_LIBRARY_PATH=$ORACLE_HOME/client/lib
+    source ~/dev/feed/bootstrap.sh
+    ;;
+  jreggio-ltm)
+    source ~/Code/feed/bootstrap.sh
+    ;;
+esac
