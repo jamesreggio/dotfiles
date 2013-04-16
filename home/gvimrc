@@ -1,8 +1,6 @@
-" Colors
+" Type
 colo black
-"colo dark
-"colo blue
-"colo macvim
+set guifont=Monaco:h13
 
 " Scrolling
 set guioptions-=l
