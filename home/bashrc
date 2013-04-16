@@ -56,5 +56,5 @@ unset completion
 # Environment
 [ -x /usr/bin/lesspipe ] && eval `SHELL=/bin/sh lesspipe`
 [ -x ~/.bash_aliases ] && source ~/.bash_aliases
-[ -x ~/.rvm/scripts/rvm ] && source ~/.rvm/scripts/rvm
+[ -x "$(which rbenv)" ] && eval "$(rbenv init -)"
 [ -x ~/.nvm/nvm.sh ] && source ~/.nvm/nvm.sh
