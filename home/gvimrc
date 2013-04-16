@@ -32,9 +32,3 @@ set updatetime=500
 hi CursorToken guibg=#242424
 autocmd CursorHold * silent! exe printf('match CursorToken /\<%s\>/', escape(expand('<cword>'), '\'))
 autocmd CursorMoved * match none
-
-" Open in fullscreen
-"if has('gui_running')
-"  set fuoptions=maxvert,maxhorz
-"  au GUIEnter * set fullscreen
-"endif

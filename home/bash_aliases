@@ -4,14 +4,3 @@ alias ll='ls -lF'
 alias lla='ls -lFA'
 [ -x "$(which ack-grep)" ] && alias ack='ack-grep'
 [ -x "$(which colordiff)" ] && alias diff='colordiff'
-
-if [ "$(hostname)" = "jreggio-wsl" ]; then
-  alias ant='./ant'
-  alias B='cd $HOME/dev/sf1/app/main/core/build'
-  alias C='cd $HOME/dev/sf1/app/main/core'
-  alias BB='cd $HOME/dev/sf1/app/180/patch/core/build'
-  alias CC='cd $HOME/dev/sf1/app/180/patch/core'
-  function crep() {
-    csearch "$1" | grep "$1"
-  }
-fi

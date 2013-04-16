@@ -1,5 +1,13 @@
---text
 --nolog
---type-set=coffee=.coffee
+--text
+
+--type-add=css=.sass,.scss
+--type-add=html=.haml,.mustache,.hbs
+--type-add=js=.coffee
 --type-set=log=.log
+
+--ignore-dir=assets
+--ignore-dir=log
 --ignore-dir=node_modules
+--ignore-dir=tmp
+--ignore-dir=vendor

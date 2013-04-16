@@ -14,15 +14,17 @@
 	cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
 [color]
 	ui = auto
+[rerere]
+	enabled = true
 [alias]
 	b = branch
-	co = checkout
 	ci = commit
+	co = checkout
 	d = diff
-	ds = diff --stat
-	dt = difftool
 	dc = diff --cached
+	ds = diff --stat
 	dsc = diff --stat --cached
+	dt = difftool
 	dtc = difftool --cached
 	f = fetch -p
 	l = log --decorate
@@ -30,6 +32,9 @@
 	m = merge
 	man = help
 	p = push --mirror
+	rb = rebase
+	rem = remote
+	ri = rebase -i
 	s = status --short --branch
 	sm = submodule
 	sta = stash apply

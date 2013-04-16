@@ -54,17 +54,7 @@ completion=/etc/bash_completion
 unset completion
 
 # Environment
-[ -x "$(which rbenv)" ] && eval `rbenv init -`
 [ -x /usr/bin/lesspipe ] && eval `SHELL=/bin/sh lesspipe`
 [ -x ~/.bash_aliases ] && source ~/.bash_aliases
-
-case "$(hostname -s)" in
-  jreggio-wsl)
-    # Unix does not pass this from the login enviroment to individual shells.
-    export LD_LIBRARY_PATH=$ORACLE_HOME/client/lib
-    source ~/dev/feed/bootstrap.sh
-    ;;
-  jreggio-ltm)
-    source ~/Code/feed/bootstrap.sh
-    ;;
-esac
+[ -x ~/.rvm/scripts/rvm ] && source ~/.rvm/scripts/rvm
+[ -x ~/.nvm/nvm.sh ] && source ~/.nvm/nvm.sh

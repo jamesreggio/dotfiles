@@ -71,6 +71,7 @@ nmap <leader>q :q<cr>
 nmap <leader>f :Ack 
 nmap <leader>g :CSearch 
 nmap <leader>n :NERDTreeToggle<cr>
+nmap <leader>e :tabnew<cr>
 nmap <leader>/ :let @/=''<cr>
 nmap <leader>0 :call ToggleColorColumn()<cr>
 nmap <leader>1 :call SplitNVertical(1, 79)<cr>
