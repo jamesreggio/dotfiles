@@ -68,6 +68,7 @@ set modelines=0
 " Leaders
 nmap <leader>w :w<cr>
 nmap <leader>q :q<cr>
+nmap <leader>p :pwd<cr>
 nmap <leader>f :Ack 
 nmap <leader>g :CSearch 
 nmap <leader>n :NERDTreeToggle<cr>
