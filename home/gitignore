@@ -1,6 +1,8 @@
 *~
 *.swo
 *.swp
+.rbenv-version
+.rbenv-gemsets
 .DS_Store
 Session.vim
 Thumbs.db

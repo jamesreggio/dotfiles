@@ -1,5 +1,7 @@
 export PATH=$PATH:/usr/local/bin
 export PATH=$PATH:/usr/local/sbin
+export PATH=$PATH:/usr/local/share/python
+export PATH=$PATH:./node_modules/.bin
 
 case "$(uname)" in
   Darwin) export PATH=$PATH:$HOME/Code/bin;;

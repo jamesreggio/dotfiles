@@ -57,4 +57,7 @@ unset completion
 [ -x /usr/bin/lesspipe ] && eval `SHELL=/bin/sh lesspipe`
 [ -x ~/.bash_aliases ] && source ~/.bash_aliases
 [ -x "$(which rbenv)" ] && eval "$(rbenv init -)"
-[ -x ~/.nvm/nvm.sh ] && source ~/.nvm/nvm.sh
+if [ -x ~/.nvm/nvm.sh ]; then
+  source ~/.nvm/nvm.sh
+  export PATH=$PATH:`npm bin --global`
+fi
