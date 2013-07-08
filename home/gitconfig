@@ -27,8 +27,9 @@
 	dt = difftool
 	dtc = difftool --cached
 	f = fetch -p
-	l = log --decorate
-	lo = log --oneline --decorate
+	l = log --graph --abbrev-commit --decorate=short --format=format:'%C(bold blue)%h%C(reset)%C(bold magenta)%d%C(reset) %C(white)%s%C(reset) %C(dim white)%an%C(reset)'
+	ld = log --graph --abbrev-commit --decorate=short --date=relative --format=format:'%C(bold blue)%h%C(reset) %C(bold green)%ar%C(reset)%C(bold magenta)%d%C(reset) %C(white)%s%C(reset) %C(dim white)%an%C(reset)'
+	ll = log --graph --decorate=short
 	m = merge
 	man = help
 	p = push --mirror
@@ -41,3 +42,5 @@
 	stl = stash list
 	stp = stash pop
 	sts = stash save
+[rebase]
+	autosquash = true
