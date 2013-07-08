@@ -1,16 +1,15 @@
-export PATH=$PATH:/usr/local/bin
-export PATH=$PATH:/usr/local/sbin
-export PATH=$PATH:/usr/local/share/python
-export PATH=$PATH:./node_modules/.bin
+export PATH=/usr/local/bin:$PATH
+export PATH=/usr/local/sbin:$PATH
+export PATH=/usr/local/share/python:$PATH
+export PATH=./node_modules/.bin:$PATH
 
 case "$(uname)" in
-  Darwin) export PATH=$PATH:$HOME/Code/bin;;
-  Linux) export PATH=$PATH:$HOME/bin;;
+  Darwin) export PATH=$HOME/Code/bin:$PATH;;
+  Linux) export PATH=$HOME/bin:$PATH;;
 esac
 
 case "$(hostname -s)" in
   jamesreggio-airbnb)
-    export PATH=$PATH:$HOME/Code/airbnb/script
     export LOCAL_MYSQL_USERNAME=root
     export LOCAL_MYSQL_PASSWORD=RX4Cf7T]ZY/G
     export RUBY_HEAP_FREE_MIN=100000
