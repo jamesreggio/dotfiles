@@ -1,8 +1,20 @@
-*~
-*.swo
-*.swp
-.rbenv-version
-.rbenv-gemsets
+# Mac OS X
 .DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# vim
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+*.un~
 Session.vim
-Thumbs.db
+.netrwhist
+*~

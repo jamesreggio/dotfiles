@@ -17,3 +17,13 @@ case "$(hostname -s)" in
     export RUBY_GC_MALLOC_LIMIT=59000000
     ;;
 esac
+
+
+
+. ~/.stripe-repos.sh
+export STRIPE_USER=james.reggio
+source /Users/jamesreggio/.rbenvrc
+
+### BEGIN HENSON
+export PATH="/Users/jamesreggio/stripe/henson/bin:$PATH"
+### END HENSON

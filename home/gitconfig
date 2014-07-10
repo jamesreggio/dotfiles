@@ -3,44 +3,50 @@
 	excludesfile = ~/.gitignore
 [user]
 	name = James Reggio
-	email = james.reggio@gmail.com
-[github]
-	user = jamesreggio
-[diff]
-	tool = Kaleidoscope
-[difftool]
-	prompt = false
-[difftool "Kaleidoscope"]
-	cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
+	email = james.reggio@stripe.com
 [color]
 	ui = auto
-[rerere]
-	enabled = true
-[alias]
-	b = branch
-	ci = commit
-	co = checkout
-	d = diff
-	dc = diff --cached
-	ds = diff --stat
-	dsc = diff --stat --cached
-	dt = difftool
-	dtc = difftool --cached
-	f = fetch -p
-	l = log --graph --abbrev-commit --decorate=short --format=format:'%C(bold blue)%h%C(reset)%C(bold magenta)%d%C(reset) %C(white)%s%C(reset) %C(dim white)%an%C(reset)'
-	ld = log --graph --abbrev-commit --decorate=short --date=relative --format=format:'%C(bold blue)%h%C(reset) %C(bold green)%ar%C(reset)%C(bold magenta)%d%C(reset) %C(white)%s%C(reset) %C(dim white)%an%C(reset)'
-	ll = log --graph --decorate=short
-	m = merge
-	man = help
-	p = push --mirror
-	rb = rebase
-	rem = remote
-	ri = rebase -i
-	s = status --short --branch
-	sm = submodule
-	sta = stash apply
-	stl = stash list
-	stp = stash pop
-	sts = stash save
+[grep]
+	lineNumber = true
+[push]
+	default = upstream
 [rebase]
 	autosquash = true
+[rerere]
+	enabled = true
+[status]
+	relativePaths = false
+[alias]
+	b    = branch
+	c    = commit
+	ca   = commit -a
+	cam  = commit -a -m
+	co   = checkout
+	d    = diff
+	ds   = diff --stat
+	dc   = diff --cached
+	dcs  = diff --cached --stat
+	f    = fetch -p
+	g    = grep
+	ls   = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+	ll   = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+	ld   = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
+	ldr  = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
+	m    = merge
+	man  = help
+	p    = push
+	pa   = push --mirror
+	pu   = pull --ff-only
+	r    = reset
+	rb   = rebase
+	rbi  = rebase -i
+	rba  = rebase --abort
+	rbc  = rebase --continue
+	rem  = remote
+	rems = remote -v show
+	s    = status --short --branch
+	sta  = stash apply
+	std  = stash drop
+	stl  = stash list
+	stp  = stash pop
+	sts  = stash save

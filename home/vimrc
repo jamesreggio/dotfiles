@@ -81,7 +81,7 @@ nmap <leader>3 :call SplitNVertical(3, 79)<cr>
 
 " Ack
 if !has('mac')
-  let g:ackprg='ack-grep -H --nocolor --nogroup --column'
+  "let g:ackprg='ack-grep -H --nocolor --nogroup --column'
 endif
 
 " Gist
