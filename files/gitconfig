@@ -17,12 +17,16 @@
 [status]
 	relativePaths = false
 [alias]
+	a    = add
+	aa   = add -A
+	ap   = add -p
 	b    = branch
 	bm   = branch -m
 	c    = commit
 	ca   = commit -a
 	cam  = commit -a -m
 	cad  = commit --amend
+	cm   = commit -m
 	co   = checkout
 	cob  = checkout -b
 	d    = diff
@@ -40,6 +44,7 @@
 	pu   = pull --ff-only
 	r    = reset
 	rh   = reset --hard
+	rp   = reset -p
 	rb   = rebase
 	rbi  = rebase -i
 	rba  = rebase --abort
