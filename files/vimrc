@@ -1,0 +1,193 @@
+set nocompatible
+filetype off
+
+" Plugins
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+source ~/.vim/vundles.vim
+call vundle#end()
+filetype plugin indent on
+syntax on
+
+" Theme
+colo Tomorrow-Night
+
+" Text
+set wrap
+set linebreak
+set showbreak=↳
+set nojoinspaces
+set encoding=utf-8
+
+" Indentation
+set list
+set autoindent
+set shiftround
+
+set listchars=tab:»»,trail:•
+set tabstop=2 softtabstop=2 shiftwidth=2
+set expandtab
+
+" Modelines
+set modeline
+set modelines=2
+
+" Gutter
+set number
+set numberwidth=4
+set nofoldenable
+set foldcolumn=0
+autocmd BufReadPost quickfix setlocal nonumber
+
+" Status
+set laststatus=2
+set visualbell t_vb=
+
+" Scrolling
+set ruler
+set scrolloff=3
+
+" Search
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+
+" Autocompletion
+set wildmenu
+set wildmode=longest:full,list:full
+
+" Undo
+set undodir=~/.vim/undodir
+set undofile
+set undolevels=1000
+set undoreload=10000
+
+" Keyboard
+set backspace=eol,indent,start
+set pastetoggle=<C-x>
+set ttimeoutlen=50
+
+" Navigation
+nmap <down> <nop>
+nmap <left> <nop>
+nmap <right> <nop>
+nmap <up> <nop>
+
+nmap <esc>{ [=
+nmap <esc>} ]=
+
+nnoremap 0 ^
+nnoremap ^ 0
+
+" Splits
+noremap <C-j> <C-w>j
+noremap <C-k> <C-w>k
+noremap <C-h> <C-w>h
+noremap <C-l> <C-w>l
+
+nnoremap vv <C-w>v
+nnoremap ss <C-w>s
+nmap <silent> Q :q<cr>
+
+" Leaders
+let mapleader=","
+nmap <silent> <leader>w :w<cr>
+nmap <silent> <leader>q :q<cr>
+nmap <silent> <leader>p :pwd<cr>
+nmap <silent> <leader><space> :let @/=''<cr>
+nmap <silent> <leader>s :setlocal spell! spelllang=en_us<cr>
+nmap <silent> <leader>c :cclose<cr>
+nmap <silent> <leader>o :copen<cr>
+
+nmap <silent> <C-n> :NERDTreeFind<cr>
+nmap <silent> <leader>n :NERDTreeToggle<cr>
+nmap <silent> <leader>u :GundoToggle<cr>
+nmap <silent> <leader>t :CtrlP<cr>
+nmap <silent> <leader>0 :call ToggleColorColumn()<cr>
+nmap <silent> <leader>h :call ToggleHardTabs()<cr>
+nmap <silent> <leader>d :call ToggleDark()<cr>
+
+nmap <leader>a :Ag! ""<left>
+nmap <leader>rr :source %<cr>
+nmap <leader>rb :VundleInstall<cr>
+
+" Dark/light theme
+function! ToggleDark()
+  if g:colors_name == 'Tomorrow-Night'
+    colo Tomorrow
+    hi CursorToken ctermbg=253 guibg=#e6e6e6
+  else
+    colo Tomorrow-Night
+    hi CursorToken ctermbg=237 guibg=#3a3a3a
+  endif
+endfunction
+
+" Hard tabs
+function! ToggleHardTabs()
+  if get(b:, 'hardtabs', 0)
+    setlocal ts< sts< sw<
+    setlocal expandtab<
+    let b:hardtabs=0
+  else
+    setlocal ts=4 sts=4 sw=4
+    setlocal noexpandtab
+    let b:hardtabs=1
+  endif
+endfunction
+
+" Color column
+function! ToggleColorColumn()
+  if &colorcolumn > 0
+    set colorcolumn=
+  else
+    set colorcolumn=80
+  endif
+endfunction
+
+" Cursor line
+setlocal cursorline
+augroup cursorlines
+  autocmd BufEnter * setlocal cursorline
+  autocmd BufLeave * setlocal nocursorline
+  autocmd BufWinEnter * setlocal cursorline
+  autocmd BufWinLeave * setlocal nocursorline
+  autocmd ShellFilterPost * setlocal cursorline
+  autocmd WinEnter * setlocal cursorline
+  autocmd WinLeave * setlocal nocursorline
+augroup end
+
+" Current word
+set updatetime=500
+hi CursorToken ctermbg=237 guibg=#3a3a3a
+augroup cursortokens
+  autocmd CursorHold * silent! exe printf('match CursorToken /\<%s\>/', escape(expand('<cword>'), '\'))
+  autocmd CursorMoved * match none
+augroup end
+
+" Format options
+function! SetFormatOptions()
+  set fo+=n " recognize lists
+  set fo+=j " remove superfluous comment leaders
+  set fo+=q " allow gq for formatting comments
+  set fo+=r " auto-insert comment leader on <Enter>
+  set fo-=o " don't auto-insert comment leader on O or o
+  set fo+=c " auto-wrap comments
+  set fo-=t " don't auto-wrap text
+  set fo+=l " don't auto-wrap already long lines
+  set fo+=1 " don't break lines after 1-letter words
+endfunction
+
+call SetFormatOptions()
+autocmd VimEnter * call SetFormatOptions()
+
+" CtrlP
+if executable('ag')
+  let g:ctrlp_user_command = 'ag %s --files-with-matches -g "" --ignore "\.git$\|\.hg$\|\.svn$"'
+  let g:ctrlp_use_caching = 0
+else
+  let g:ctrlp_custom_ignore = '\.git$'
+  let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . --cached --exclude-standard --others']
+endif
+
+let g:ctrlp_switch_buffer = 'e'

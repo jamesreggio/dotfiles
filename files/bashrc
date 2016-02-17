@@ -1,0 +1,90 @@
+# Interactivity check
+[ -z "$PS1" ] && return
+[ -x $(which brew) ] && has_brew=yes
+
+# Shell
+set -o vi
+bind -m vi-insert "\C-l":clear-screen
+shopt -s checkwinsize
+
+# History
+shopt -s histappend
+HISTCONTROL=ignoreboth
+HISTSIZE=100000
+HISTFILESIZE=100000
+PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
+
+# Completion
+[ -f /etc/bash_completion ] && source /etc/bash_completion
+[ -f ~/.bash_completion ] && source ~/.bash_completion
+[ -n $has_brew ] && source $(brew --prefix)/etc/bash_completion
+complete -o default -o nospace -F _git g
+
+# Color
+case "$TERM" in
+  xterm-color) color_shell=yes;;
+  xterm-256color) color_shell=yes;;
+  screen-256color) color_shell=yes;;
+  *)
+    if [ -x /usr/bin/tput ] && tput setaf 1 >/dev/null; then
+      # We have color support; assume it's compliant with Ecma-48
+      # (ISO/IEC-6429). (Lack of such support is extremely rare, and
+      # such a case would tend to support setf rather than setaf.)
+      color_shell=yes
+    fi
+  ;;
+esac
+
+if [ -n $color_shell ]; then
+  # Prompt
+  if [ "$USER" = root ]; then
+    user_color=31
+  else
+    user_color=34
+  fi
+
+  PS1='${debian_chroot:+($debian_chroot)}'
+  if [ -n "$(type -t __git_ps1)" ]; then
+    PS1=$PS1'\[\033[01;33m\]$(__git_ps1 "(%s) ")'
+  fi
+  PS1=$PS1'\[\033[01;'$user_color'm\]\u'
+  if [ -n "$SSH_CONNECTION" ]; then
+    PS1=$PS1'@\h'
+  fi
+  PS1=$PS1'\[\033[00m\]:\[\033[01;36m\]\w\[\033[00m\]$ '
+  unset user_color
+
+  # ls
+  if [ -x /usr/bin/dircolors ]; then
+    eval "$(dircolors -b)"
+    alias ls="ls --color=auto"
+  else
+    export CLICOLOR=1
+    export LSCOLORS=ExFxCxDxBxegedabagacad
+  fi
+
+  # grep
+  alias grep="grep --color=auto"
+  alias fgrep="fgrep --color=auto"
+  alias egrep="egrep --color=auto"
+fi
+unset color_shell
+
+# Environment
+export EDITOR="vim"
+export LESS="-f -i -g -M -R -X -F -x4 -z-2"
+
+if [ -n $has_brew ]; then
+  export NVM_DIR=~/.nvm
+  nvm_prefix="$(brew --prefix nvm 2>/dev/null)"
+else
+  nvm_prefix=~/.nvm
+fi
+[ -x "$nvm_prefix/nvm.sh" ] && source "$nvm_prefix/nvm.sh"
+unset nvm_prefix
+
+[ -x "$(which rbenv)" ] && eval "$(rbenv init -)"
+[ -x "$(which fasd)" ] && eval "$(fasd --init auto)"
+[ -x ~/.bash_aliases ] && source ~/.bash_aliases
+
+unset has_brew

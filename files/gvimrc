@@ -1,0 +1,16 @@
+" Theme
+set guifont=Inconsolata-dz:h12,Monaco:h13
+
+" Scrolling
+set guioptions-=l
+set guioptions-=L
+set guioptions-=r
+set guioptions-=R
+
+" Chrome
+set guioptions-=m
+set guioptions-=T
+set guioptions-=e
+
+" Other
+set visualbell t_vb=

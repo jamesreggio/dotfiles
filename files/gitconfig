@@ -1,0 +1,54 @@
+[core]
+	editor = vim
+	excludesfile = ~/.gitignore
+[user]
+	name = James Reggio
+	email = james.reggio@gmail.com
+[color]
+	ui = auto
+[grep]
+	lineNumber = true
+[push]
+	default = upstream
+[rebase]
+	autosquash = true
+[rerere]
+	enabled = true
+[status]
+	relativePaths = false
+[alias]
+	b    = branch
+	bm   = branch -m
+	c    = commit
+	ca   = commit -a
+	cam  = commit -a -m
+	cad  = commit --amend
+	co   = checkout
+	cob  = checkout -b
+	d    = diff
+	dc   = diff --cached
+	f    = fetch -p
+	g    = grep
+	l    = log --pretty=format:"%C(bold\\ blue)%h\\ %Creset%s%C(yellow)%d" --decorate
+	ls   = log --pretty=format:"%C(bold\\ blue)%h\\ %C(cyan)%<(15,trunc)%an\\ %Creset%s%C(yellow)%d" --decorate
+	ld   = log --pretty=format:"%C(bold\\ blue)%h\\ %C(cyan)%<(15,trunc)%ad\\ %Creset%s%C(yellow)%d" --decorate --date=short
+	ldr  = log --pretty=format:"%C(bold\\ blue)%h\\ %C(cyan)%<(15,trunc)%ad\\ %Creset%s%C(yellow)%d" --decorate --date=relative
+	m    = merge
+	man  = help
+	p    = push
+	pa   = push --mirror
+	pu   = pull --ff-only
+	r    = reset
+	rh   = reset --hard
+	rb   = rebase
+	rbi  = rebase -i
+	rba  = rebase --abort
+	rbc  = rebase --continue
+	rem  = remote
+	rems = remote -v show
+	s    = status --short --branch
+	sta  = stash apply
+	std  = stash drop
+	stl  = stash list
+	stp  = stash pop
+	sts  = stash save

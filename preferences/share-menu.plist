@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+    <string>com.apple.share.AirDrop.send</string>
+    <string>com.apple.messages.ShareExtension</string>
+    <string>com.apple.share.Mail.compose</string>
+    <string>com.apple.share.Facebook.post</string>
+    <string>com.apple.share.Twitter.post</string>
+    <string>com.apple.share.System.add-to-aperture</string>
+    <string>com.apple.share.System.add-to-iphoto</string>
+    <string>com.apple.share.System.add-to-safari-reading-list</string>
+    <string>com.apple.share.Video.upload-image-Flickr</string>
+    <string>com.apple.share.LinkedIn.post</string>
+    <string>com.apple.Notes.SharingExtension</string>
+    <string>com.apple.reminders.RemindersShareExtension</string>
+    <string>com.apple.share.SinaWeibo.post</string>
+    <string>com.apple.share.TencentWeibo.post</string>
+    <string>com.apple.share.Video.upload-Tudou</string>
+    <string>com.apple.share.Video.upload-Vimeo</string>
+    <string>com.apple.share.Video.upload-Youku</string>
+</array>
+</plist>

@@ -1,0 +1,23 @@
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+
+alias l="ls -l"
+alias ll="ls -la"
+
+alias m="less"
+alias more="m"
+
+alias pbc="pbcopy"
+alias pbp="pbp"
+
+alias g="git"
+alias h="http"
+alias t="tmux"
+alias rl="rlwrap"
+alias rmrf="rm -rf"
+
+alias v="f -e vim"
+_fasd_bash_hook_cmd_complete v
+
+[ -x "$(which colordiff)" ] && alias diff="colordiff"
