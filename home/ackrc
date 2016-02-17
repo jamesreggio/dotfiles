@@ -1,9 +1,0 @@
---nolog
-
---type-add=css=.sass,.scss
---type-add=html=.haml,.mustache,.hbs
---type-add=js=.coffee
---type-set=log=.log
-
---ignore-dir=node_modules
---ignore-dir=vendor
