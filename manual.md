@@ -1,9 +1,14 @@
-# Preflight
+# Manual configuration
+
+Most of these steps defy automation, though there's probably still some room
+for additional plist munging.
+
+## Preflight
 
 - Install Xcode from App Store
 - Open and close System Preferences
 
-# Postflight
+## Postflight
 
 - Install iWork from App Store
 - Manually adjust System Preferences

@@ -7,7 +7,7 @@ for configuration automation.
 
 ## How to install
 
-Consult [`manual`](manual) for pre- and post-flight manual activities, then
+Consult [`manual.md`](manual.md) for pre- and post-flight manual activities, then
 run:
 
 ```bash
