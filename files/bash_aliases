@@ -21,3 +21,9 @@ alias v="f -e vim"
 _fasd_bash_hook_cmd_complete v
 
 [ -x "$(which colordiff)" ] && alias diff="colordiff"
+
+# less refuses to highlight when in screen-256color
+if [ "$TERM" = "screen-256color" ]; then
+  alias less="TERM=xterm-256color less"
+  alias man="TERM=xterm-256color man"
+fi
