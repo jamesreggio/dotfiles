@@ -29,9 +29,14 @@
     name={{ item }}
     state=present
 
+- name: create login items directory
+  file: >
+    path="{{ home }}/Library/LaunchAgents"
+    state=directory
+
 - name: link login items
   with_items: login_items
   file: >
     src=/usr/local/opt/{{ item }}/homebrew.mxcl.{{ item }}.plist
-    path=~/Library/LaunchAgents/homebrew.mxcl.{{ item }}.plist
+    path="{{ home }}/Library/LaunchAgents/homebrew.mxcl.{{ item }}.plist"
     state=link
