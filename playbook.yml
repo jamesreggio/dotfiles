@@ -152,4 +152,5 @@
   tasks:
     - include: tasks/homebrew.yml
     - include: tasks/files.yml
+    - include: tasks/vim.yml
     - include: tasks/preferences.yml

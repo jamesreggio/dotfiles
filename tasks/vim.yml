@@ -1,0 +1,9 @@
+---
+- name: clone Vundle
+  git: >
+    repo=https://github.com/VundleVim/Vundle.vim.git
+    dest={{ home }}/.vim/bundle/Vundle.vim
+    clone=yes
+
+- name: install plugins
+  command: vim +PluginInstall +qall
