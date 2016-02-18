@@ -16,6 +16,8 @@ curl -fsSL https://raw.githubusercontent.com/jamesreggio/dotfiles/master/bootstr
 
 ## Thanks to...
 
+* [YADR](https://github.com/skwp/dotfiles) for many valuable vim plugins
 * [@brandonbloom](https://github.com/brandonbloom) for teaching me vim
 * [@metcalf](https://github.com/metcalf) for the Ansible playbook and tasks
-* [@jenanwise](https://github.com/jenanwise) for many good ideas
+* [@jenanwise](https://github.com/jenanwise) for the [bootstrap](bootstrap.sh)
+  script
