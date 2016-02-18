@@ -2,3 +2,10 @@
 - name: set preferences
   with_items: preferences
   shell: "{{ item }}"
+
+- name: restart services
+  with_items:
+    - Dock
+    - Finder
+    - SystemUIServer
+  command: killall {{ item }}
