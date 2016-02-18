@@ -2,8 +2,16 @@
 
 ...because I really don't want to use Sublime on your interviewing machine.
 
-These work on recent versions of Max OS X and utilize [Ansible](https://www.ansible.com/)
-for configuration automation.
+After going around the block with [YADR](https://github.com/skwp/dotfiles) and
+[`oh-my-zsh`](https://github.com/robbyrussell/oh-my-zsh) &mdash; which require
+you to subtract the things you don't want &mdash; I decided to return to the
+simplicity of manually-compiled dotfiles. This collection configures `bash`,
+`tmux`, and `vim` in a sensible way, with the [Tomorrow](https://github.com/chriskempson/tomorrow-theme)
+theme across all three.
+
+These dotfiles also capture my ideal Mac OS X configuration &mdash; insofar
+that it can be automated &mdash; and make several OS X assumptions. They
+utilize [Ansible](https://www.ansible.com/) for configuration automation.
 
 ## How to install
 
