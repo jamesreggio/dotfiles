@@ -84,6 +84,8 @@
       src: hidden
 
     preferences:
+      - defaults write "com.apple.universalaccess" "UserAssignableHotKeys" -bool false
+      - defaults delete "com.apple.universalaccess" "UserAssignableHotKeys"
       - defaults write "Apple Global Domain" "AppleActionOnDoubleClick" -string "Minimize"
       - defaults write "Apple Global Domain" "AppleEnableSwipeNavigateWithScrolls" -bool false
       - defaults write "Apple Global Domain" "AppleICUForce24HourTime" -bool true
@@ -92,11 +94,11 @@
       - defaults write "Apple Global Domain" "CGDisableCursorLocationMagnification" -bool true
       - defaults write "Apple Global Domain" "NSCloseAlwaysConfirmsChanges" -bool true
       - defaults write "Apple Global Domain" "NSTableViewDefaultSizeMode" -int 1
+      - defaults write "Apple Global Domain" "NSUserDictionaryReplacementItems" "$(cat {{ base }}/preferences/replacement-items.plist)"
+      - defaults write "Apple Global Domain" "NSUserKeyEquivalents" "$(cat {{ base }}/preferences/user-key-equivalents.plist)"
       - defaults write "Apple Global Domain" "com.apple.sound.beep.feedback" -int 1
       - defaults write "Apple Global Domain" "com.apple.trackpad.scaling" -float 1
       - defaults write "Apple Global Domain" "userMenuExtraStyle" -int 2
-      - defaults write "NSUserKeyEquivalents" "Show Next Tab" -string "@~\\U2192"
-      - defaults write "NSUserKeyEquivalents" "Show Previous Tab" -string "@~\\U2190"
       - defaults write "com.apple.AppleMultitouchTrackpad" "ActuationStrength" -int 0
       - defaults write "com.apple.AppleMultitouchTrackpad" "HIDScrollZoomModifierMask" -int 262144
       - defaults write "com.apple.AppleMultitouchTrackpad" "TrackpadThreeFingerHorizSwipeGesture" -int 1
@@ -138,16 +140,15 @@
       - defaults write "com.apple.menuextra.clock" "DateFormat" -string "EEE MMM d  H:mm"
       - defaults write "com.apple.messageshelper.FavoritesController" "FaceTimeFavoritesDNDEnabled" -bool false
       - defaults write "com.apple.messageshelper.FavoritesController" "FaceTimeTwoTimeCallthroughEnabled" -bool true
-      - defaults write "com.apple.preferences.extensions.ShareMenu" "displayOrder" "$(cat {{ base }}/preferences/share-menu.plist)"
       - defaults write "com.apple.screensaver" "askForPasswordDelay" -int 5
       - defaults write "com.apple.systempreferences" "NSQuitAlwaysKeepsWindows" -bool false
+      - defaults write "com.apple.terminal" "Default Window Settings" -string "Tomorrow"
+      - defaults write "com.apple.terminal" "Startup Window Settings" -string "Tomorrow"
+      - defaults write "com.apple.terminal" "Window Settings" -dict-add "Tomorrow" "$(cat {{ base }}/preferences/tomorrow.plist)"
       - defaults write "com.apple.universalaccess" "closeViewScrollWheelToggle" -bool true
       - defaults write "com.apple.universalaccess" "closeViewSmoothImages" -bool false
       - defaults write "com.googlecode.iterm2" LoadPrefsFromCustomFolder -bool true
       - defaults write "com.googlecode.iterm2" PrefsCustomFolder "{{ home }}/.iterm2"
-      - defaults write "com.apple.terminal" "Window Settings" -dict-add "Tomorrow" "$(cat {{ base }}/preferences/tomorrow.plist)"
-      - defaults write "com.apple.terminal" "Default Window Settings" -string "Tomorrow"
-      - defaults write "com.apple.terminal" "Startup Window Settings" -string "Tomorrow"
 
   tasks:
     - include: tasks/homebrew.yml
