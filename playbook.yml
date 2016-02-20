@@ -21,6 +21,7 @@
       git:
       httpie:
       jq:
+      leiningen:
       macvim:
       nvm:
       phantomjs:
@@ -44,6 +45,7 @@
       - font-inconsolata-dz
       - google-chrome
       - iterm2
+      - java
       - moom
       - paw
       - sketch
