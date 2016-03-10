@@ -99,7 +99,7 @@ nmap <silent> <leader><space> :let @/=''<cr>
 nmap <silent> <leader>s :setlocal spell! spelllang=en_us<cr>
 nmap <silent> <leader>c :cclose<cr>
 nmap <silent> <leader>o :copen<cr>
-nmap <silent> <leader>e :w !pbcopy<cr><cr>
+nmap <silent> <leader>e :tabnew<cr>
 
 nmap <silent> <C-n> :NERDTreeFind<cr>
 nmap <silent> <leader>n :NERDTreeToggle<cr>
