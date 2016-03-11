@@ -5,26 +5,26 @@
 
 - name: install homebrew
   shell: ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-  when: brew_stat.stat.exists == false
+  when: "{{ brew_stat.stat.exists }} == false"
 
 - name: update homebrew
   homebrew: update_homebrew=yes
 
 - name: install taps
-  with_items: taps
+  with_items: "{{ taps }}"
   homebrew_tap: >
     tap={{ item }}
     state=present
 
 - name: install brews
-  with_dict: brews
+  with_dict: "{{ brews }}"
   homebrew: >
     name={{ item.key }}
     install_options={{ item.value }}
     state=latest
 
 - name: install casks
-  with_items: casks
+  with_items: "{{ casks }}"
   homebrew_cask: >
     name={{ item }}
     state=present
@@ -35,7 +35,7 @@
     state=directory
 
 - name: link login items
-  with_items: login_items
+  with_items: "{{ login_items }}"
   file: >
     src=/usr/local/opt/{{ item }}/homebrew.mxcl.{{ item }}.plist
     path="{{ home }}/Library/LaunchAgents/homebrew.mxcl.{{ item }}.plist"

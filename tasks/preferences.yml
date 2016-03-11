@@ -1,6 +1,6 @@
 ---
 - name: set preferences
-  with_items: preferences
+  with_items: "{{ preferences }}"
   shell: "{{ item }}"
 
 - name: restart services
