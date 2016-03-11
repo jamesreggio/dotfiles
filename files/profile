@@ -1,8 +1,8 @@
 append_to_path() {
-  [ -d "$1" ] && export PATH="$PATH:$1"
+  export PATH="$PATH:$1"
 }
 prepend_to_path() {
-  [ -d "$1" ] && export PATH="$1:$PATH"
+  export PATH="$1:$PATH"
 }
 
 prepend_to_path /usr/local/bin
