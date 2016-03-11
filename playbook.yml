@@ -7,6 +7,7 @@
 
     taps:
       - caskroom/fonts
+      - homebrew/science
       - railwaycat/homebrew-emacsmacport
     brews:
       ansible:
@@ -16,14 +17,17 @@
       dtrx:
       emacs-mac: with-spacemacs-icon
       fasd:
+      fontconfig: build-from-source
       fpp:
       fswatch:
       git:
+      gnuplot: with-aquaterm, with-qt4
       httpie:
       jq:
       leiningen:
       macvim:
       nvm:
+      octave:
       phantomjs:
       postgresql:
       rbenv:
@@ -38,6 +42,7 @@
       wget:
     casks:
       - 1password
+      - aquaterm
       - charles
       - dropbox
       - firefox
