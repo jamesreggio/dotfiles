@@ -74,8 +74,8 @@ nmap <left> <nop>
 nmap <right> <nop>
 nmap <up> <nop>
 
-nmap <esc>{ [=
-nmap <esc>} ]=
+map <esc>{ [=
+map <esc>} ]=
 
 nnoremap 0 ^
 nnoremap ^ 0
