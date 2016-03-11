@@ -110,6 +110,7 @@ nmap <silent> <leader>h :call ToggleHardTabs()<cr>
 nmap <silent> <leader>d :call ToggleDark()<cr>
 
 nmap <leader>a :Ag! ""<left>
+nmap <silent>K :Ag! <cword><cr>
 nmap <leader>rr :source %<cr>
 nmap <leader>rb :VundleInstall<cr>
 
