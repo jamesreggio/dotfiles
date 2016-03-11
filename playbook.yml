@@ -7,6 +7,7 @@
 
     taps:
       - caskroom/fonts
+      - caskroom/versions
       - homebrew/science
       - railwaycat/homebrew-emacsmacport
     brews:
@@ -49,6 +50,7 @@
       - flux
       - font-inconsolata-dz
       - google-chrome
+      - google-chrome-canary
       - iterm2
       - java
       - moom
