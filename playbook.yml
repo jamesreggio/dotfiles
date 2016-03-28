@@ -23,6 +23,7 @@
       fswatch:
       git:
       gnuplot: with-aquaterm, with-qt4
+      hbase:
       httpie:
       jq:
       leiningen:
@@ -36,6 +37,7 @@
       redis:
       rlwrap:
       the_silver_searcher:
+      thrift:
       tmux:
       tree:
       vim:
