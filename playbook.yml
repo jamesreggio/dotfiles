@@ -164,4 +164,4 @@
     - include: tasks/files.yml
     - include: tasks/vim.yml
     - include: tasks/preferences.yml
-      when: "{{ lookup('env', 'PREFS') }} != 0"
+      when: "{{ lookup('env', 'PREFS') != '0' }}"
