@@ -1,3 +1,4 @@
-backups
-files/vim/bundle
-files/vim/undo
+/backups
+/files/vim/bundle
+/files/vim/undo
+/playbook.retry
