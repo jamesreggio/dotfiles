@@ -1,3 +1,4 @@
+call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " TODO:
@@ -39,3 +40,5 @@ Plugin 'tpope/vim-repeat'
 Plugin 'rking/ag.vim'
 Plugin 'vim-scripts/IndexedSearch'
 Plugin 'nelstrom/vim-visual-star-search'
+
+call vundle#end()
