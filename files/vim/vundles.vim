@@ -8,7 +8,6 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'sjl/gundo.vim'
 Plugin 'goldfeld/ctrlr.vim'
-Plugin 'chriskempson/vim-tomorrow-theme'
 Plugin 'vim-scripts/sudo.vim'
 
 " Navigation

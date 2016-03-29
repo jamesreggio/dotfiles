@@ -8,7 +8,8 @@ filetype plugin indent on
 syntax on
 
 " Theme
-silent! colo Tomorrow-Night
+set background=dark
+silent! colo base16-tomorrow
 
 " Text
 set wrap
@@ -105,23 +106,11 @@ nmap <silent> <leader>u :GundoToggle<cr>
 nmap <silent> <leader>t :CtrlP<cr>
 nmap <silent> <leader>0 :call ToggleColorColumn()<cr>
 nmap <silent> <leader>h :call ToggleHardTabs()<cr>
-nmap <silent> <leader>d :call ToggleDark()<cr>
 
 nmap <leader>a :Ag! ""<left>
 nmap <silent>K :Ag! <cword><cr>
 nmap <leader>rr :source %<cr>
 nmap <leader>rb :VundleInstall<cr>
-
-" Dark/light theme
-function! ToggleDark()
-  if g:colors_name == 'Tomorrow-Night'
-    colo Tomorrow
-    hi CursorToken ctermbg=253 guibg=#e6e6e6
-  else
-    colo Tomorrow-Night
-    hi CursorToken ctermbg=237 guibg=#3a3a3a
-  endif
-endfunction
 
 " Hard tabs
 function! ToggleHardTabs()

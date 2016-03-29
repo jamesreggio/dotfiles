@@ -153,9 +153,9 @@
       - defaults write "com.apple.messageshelper.FavoritesController" "FaceTimeTwoTimeCallthroughEnabled" -bool true
       - defaults write "com.apple.screensaver" "askForPasswordDelay" -int 5
       - defaults write "com.apple.systempreferences" "NSQuitAlwaysKeepsWindows" -bool false
-      - defaults write "com.apple.terminal" "Default Window Settings" -string "Tomorrow"
-      - defaults write "com.apple.terminal" "Startup Window Settings" -string "Tomorrow"
-      - defaults write "com.apple.terminal" "Window Settings" -dict-add "Tomorrow" "$(cat {{ base }}/preferences/tomorrow.plist)"
+      - defaults write "com.apple.terminal" "Default Window Settings" -string "base16-tomorrow"
+      - defaults write "com.apple.terminal" "Startup Window Settings" -string "base16-tomorrow"
+      - defaults write "com.apple.terminal" "Window Settings" -dict-add "base16-tomorrow" "$(cat {{ base }}/preferences/base16-tomorrow.plist)"
       - defaults write "com.apple.universalaccess" "closeViewScrollWheelToggle" -bool true
       - defaults write "com.apple.universalaccess" "closeViewSmoothImages" -bool false
       - defaults write "com.googlecode.iterm2" LoadPrefsFromCustomFolder -bool true

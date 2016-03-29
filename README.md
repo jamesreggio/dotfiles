@@ -6,7 +6,7 @@ After going around the block with [YADR](https://github.com/skwp/dotfiles) and
 [`oh-my-zsh`](https://github.com/robbyrussell/oh-my-zsh) &mdash; which require
 you to subtract the things you don't want &mdash; I decided to return to the
 simplicity of manually-compiled dotfiles. This collection configures `bash`,
-`tmux`, and `vim` in a sensible way, with the [Tomorrow](https://github.com/chriskempson/tomorrow-theme)
+`tmux`, and `vim` in a sensible way, with the [base16-tomorrow](https://github.com/chriskempson/base16)
 theme across all three.
 
 These dotfiles also capture my ideal Mac OS X configuration &mdash; insofar
