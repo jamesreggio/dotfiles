@@ -20,6 +20,9 @@ alias rmrf="rm -rf"
 alias v="f -e vim"
 _fasd_bash_hook_cmd_complete v
 
+alias bn="rlwrap -a=false babel-node"
+alias hb="rlwrap -a=false hbase shell"
+
 [ -x "$(which colordiff)" ] && alias diff="colordiff"
 
 # less refuses to highlight when in screen-256color
