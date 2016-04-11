@@ -27,11 +27,13 @@ Plugin 'tpope/vim-git'
 
 " Languages
 Plugin 'sheerun/vim-polyglot'
+Plugin 'othree/es.next.syntax.vim'
 Plugin 'jtratner/vim-flavored-markdown'
 Plugin 'scrooloose/syntastic'
 
 " Editing
 Plugin 'AndrewRadev/splitjoin.vim'
+Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 
