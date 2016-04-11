@@ -35,6 +35,7 @@
       octave:
       phantomjs:
       postgresql:
+      pyenv:
       rbenv:
       reattach-to-user-namespace:
       redis:
