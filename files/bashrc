@@ -83,6 +83,7 @@ fi
 [ -x "$nvm_prefix/nvm.sh" ] && source "$nvm_prefix/nvm.sh"
 unset nvm_prefix
 
+[ -x "$(which pyenv)" ] && eval "$(pyenv init -)"
 [ -x "$(which rbenv)" ] && eval "$(rbenv init -)"
 [ -x "$(which fasd)" ] && eval "$(fasd --init auto)"
 [ -x ~/.bash_aliases ] && source ~/.bash_aliases
