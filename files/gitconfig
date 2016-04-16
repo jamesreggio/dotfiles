@@ -40,6 +40,8 @@
 	m    = merge
 	man  = help
 	p    = push
+	po   = push origin
+	pom  = push origin master
 	pa   = push --mirror
 	pu   = pull --ff-only
 	r    = reset
