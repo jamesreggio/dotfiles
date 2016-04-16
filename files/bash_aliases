@@ -23,6 +23,9 @@ _fasd_bash_hook_cmd_complete v
 alias bn="rlwrap -a=false babel-node"
 alias hb="rlwrap -a=false hbase shell"
 
+alias dps="docker ps -a"
+alias dex="docker exec -it"
+
 [ -x "$(which colordiff)" ] && alias diff="colordiff"
 
 # less refuses to highlight when in screen-256color
