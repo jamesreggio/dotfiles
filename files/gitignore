@@ -36,3 +36,7 @@ Session.vim
 auto-save-list
 tramp
 .\#*
+
+# Ruby
+/.ruby-version
+/.ruby-gemset
