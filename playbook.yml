@@ -31,11 +31,13 @@
       jq:
       leiningen:
       macvim:
+      mongodb:
       nvm:
       octave:
       phantomjs:
       postgresql:
       pyenv:
+      rbenv-gemset:
       rbenv:
       reattach-to-user-namespace:
       redis:
@@ -71,6 +73,7 @@
       - vlc
       - wireshark
     login_items:
+      - mongodb
       - postgresql
       - redis
 
