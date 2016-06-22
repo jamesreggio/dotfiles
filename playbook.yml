@@ -15,9 +15,9 @@
       aspell:
       bash-completion:
       colordiff:
-      docker:
-      docker-machine:
       docker-compose:
+      docker-machine:
+      docker:
       dtrx:
       emacs-mac: with-spacemacs-icon
       fasd:
