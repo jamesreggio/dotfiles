@@ -32,6 +32,7 @@
       leiningen:
       macvim:
       mongodb:
+      mysql:
       nvm:
       octave:
       phantomjs:
@@ -65,6 +66,7 @@
       - java
       - moom
       - paw
+      - postico
       - sketch
       - skype
       - slack
@@ -75,6 +77,7 @@
       - wireshark
     login_items:
       - mongodb
+      - mysql
       - postgresql
       - redis
 
