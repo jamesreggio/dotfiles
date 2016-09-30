@@ -16,6 +16,7 @@ Plugin 'jeetsukumaran/vim-indentwise'
 Plugin 'justinmk/vim-sneak'
 
 " Files
+Plugin 'danro/rename.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
