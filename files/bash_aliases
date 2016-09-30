@@ -9,13 +9,15 @@ alias m="less"
 alias more="m"
 
 alias pbc="pbcopy"
-alias pbp="pbp"
+alias pbp="pbpaste"
 
 alias g="git"
 alias h="http"
-alias t="tmux"
 alias rl="rlwrap"
 alias rmrf="rm -rf"
+
+alias t="tmux"
+alias tat="tmux attach -t"
 
 alias v="f -e vim"
 _fasd_bash_hook_cmd_complete v
