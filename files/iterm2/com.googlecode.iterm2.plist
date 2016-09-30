@@ -472,13 +472,13 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame Preferences</key>
-	<string>269 284 606 456 0 0 2560 1417 </string>
+	<string>85 308 606 456 0 0 1440 877 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>968 786 620 392 0 0 2560 1440 </string>
+	<string>970 786 620 392 0 0 2560 1440 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 352 850 525 0 0 2560 1440 </string>
+	<string>2560 338 850 503 2560 185 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>58 71 1606 1013 0 0 2560 1417 </string>
+	<string>49 53 1207 792 0 0 1440 877 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -1302,6 +1302,8 @@
 	<true/>
 	<key>NoSyncDoNotWarnBeforePastingOneLineEndingInNewlineAtShellPrompt_selection</key>
 	<integer>1</integer>
+	<key>NoSyncInstallationId</key>
+	<string>91893E7B-D487-4FE2-BD63-D3FBA3923410</string>
 	<key>NoSyncLastTipTime</key>
 	<real>480901379.073713</real>
 	<key>NoSyncPermissionToShowTip</key>
@@ -1374,11 +1376,11 @@
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/testing3.xml</string>
+	<string>https://iterm2.com/appcasts/testing.xml?shard=70</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-05-17T17:29:15Z</date>
+	<date>2016-09-26T16:24:58Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowBookmarkName</key>
@@ -1415,8 +1417,12 @@
 	<integer>0</integer>
 	<key>WordCharacters</key>
 	<string>/-+\~_.</string>
+	<key>findIgnoreCase_iTerm</key>
+	<true/>
+	<key>findRegex_iTerm</key>
+	<false/>
 	<key>iTerm Version</key>
-	<string>2.9.20160313</string>
+	<string>3.0.5</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
