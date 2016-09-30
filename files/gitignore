@@ -40,3 +40,6 @@ tramp
 # Ruby
 /.ruby-version
 /.ruby-gemset
+
+# Node
+npm-debug.log
