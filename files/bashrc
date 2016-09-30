@@ -87,10 +87,6 @@ unset nvm_prefix
 [ -x "$(which rbenv)" ] && eval "$(rbenv init -)"
 [ -x "$(which fasd)" ] && eval "$(fasd --init auto)"
 
-if [ -x "$(which docker-machine)" ]; then
-  [ "$(docker-machine status)" = "Running" ] && eval "$(docker-machine env)"
-fi
-
 [ -x ~/.bash_aliases ] && source ~/.bash_aliases
 
 unset has_brew

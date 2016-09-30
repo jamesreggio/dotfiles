@@ -16,9 +16,6 @@
       aspell:
       bash-completion:
       colordiff:
-      docker-compose:
-      docker-machine:
-      docker:
       dtrx:
       emacs-mac: with-spacemacs-icon
       fasd:
@@ -58,6 +55,7 @@
       - 1password
       - aquaterm
       - charles
+      - docker
       - dropbox
       - firefox
       - flux
