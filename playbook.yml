@@ -13,6 +13,7 @@
     brews:
       android-sdk:
       ansible:
+      apgdiff:
       aspell:
       bash-completion:
       colordiff:
@@ -20,7 +21,6 @@
       emacs-mac: with-spacemacs-icon
       fasd:
       fontconfig: build-from-source
-      fpp:
       fswatch:
       git:
       gnuplot: with-aquaterm, with-qt4
@@ -29,6 +29,7 @@
       jq:
       leiningen:
       macvim:
+      memcached:
       mongodb:
       mysql:
       nvm:
@@ -43,6 +44,7 @@
       redis:
       rethinkdb:
       rlwrap:
+      sleuthkit:
       the_silver_searcher:
       thrift:
       tmux:
@@ -79,6 +81,7 @@
       - wireshark
     login_items:
       - hbase
+      - memcached
       - mongodb
       - mysql
       - postgresql
