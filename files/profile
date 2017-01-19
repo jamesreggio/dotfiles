@@ -5,10 +5,7 @@ prepend_to_path() {
   export PATH="$1:$PATH"
 }
 
-prepend_to_path /usr/local/bin
-prepend_to_path /usr/local/sbin
 append_to_path ./node_modules/.bin
-append_to_path "$(npm config --global get prefix)/bin"
 append_to_path ~/bin
 
 export ANDROID_HOME=/usr/local/opt/android-sdk
