@@ -53,6 +53,7 @@
       watch:
       watchman:
       wget:
+      yarn:
     casks:
       - 1password
       - aquaterm
