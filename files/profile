@@ -1,8 +1,8 @@
 append_to_path() {
-  export PATH="$PATH:$1"
+  [ -z $TMUX ] && export PATH="$PATH:$1"
 }
 prepend_to_path() {
-  export PATH="$1:$PATH"
+  [ -z $TMUX ] && export PATH="$1:$PATH"
 }
 
 append_to_path ./node_modules/.bin
