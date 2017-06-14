@@ -8,4 +8,6 @@ prepend_to_path() {
 append_to_path ./node_modules/.bin
 append_to_path ~/bin
 
-export ANDROID_HOME=/usr/local/opt/android-sdk
+export ANDROID_HOME=$HOME/Library/Android/sdk
+append_to_path $ANDROID_HOME/tools
+append_to_path $ANDROID_HOME/platform-tools
