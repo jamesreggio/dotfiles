@@ -58,21 +58,27 @@
       - 1password
       - aquaterm
       - charles
+      - disk-inventory-x
       - docker
       - dropbox
+      - fabric
       - firefox
-      - flux
       - font-inconsolata-dz
+      - genymotion
       - google-chrome
       - google-chrome-canary
       - google-cloud-sdk
       - iterm2-beta
       - java
+      - microsoft-office
       - moom
       - ngrok
       - paw
       - postico
+      - principle
+      - react-native-debugger
       - sketch
+      - sketch-toolbox
       - skype
       - slack
       - spotify
