@@ -4,6 +4,8 @@
 [user]
 	name = James Reggio
 	email = james.reggio@gmail.com
+[github]
+	user = jamesreggio
 [color]
 	ui = auto
 [grep]
