@@ -68,6 +68,7 @@
       - firefox
       - font-inconsolata-dz
       - genymotion
+      - go
       - google-chrome
       - google-chrome-canary
       - google-cloud-sdk
