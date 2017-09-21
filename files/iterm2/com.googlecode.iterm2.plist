@@ -423,6 +423,8 @@
 	<integer>97</integer>
 	<key>HotkeyCode</key>
 	<integer>0</integer>
+	<key>HotkeyMigratedFromSingleToMulti</key>
+	<true/>
 	<key>HotkeyModifiers</key>
 	<integer>1310985</integer>
 	<key>IRMemory</key>
@@ -473,14 +475,16 @@
 	</dict>
 	<key>NSWindow Frame Preferences</key>
 	<string>85 308 606 456 0 0 1440 877 </string>
+	<key>NSWindow Frame SUStatusFrame</key>
+	<string>1456 722 400 129 0 0 2560 1417 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>970 786 620 392 0 0 2560 1440 </string>
+	<string>408 381 620 392 0 0 1440 900 </string>
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>342 171 918 495 0 0 2560 1440 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>761 293 970 587 0 0 2560 1417 </string>
+	<string>35 0 1090 615 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>285 679 850 503 0 0 2560 1417 </string>
+	<string>285 553 1090 615 0 0 2560 1417 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -1382,7 +1386,9 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-09-30T19:15:26Z</date>
+	<date>2017-06-20T16:23:40Z</date>
+	<key>SUSkippedVersion</key>
+	<string>3.1.beta.5</string>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowBookmarkName</key>
@@ -1421,10 +1427,12 @@
 	<string>/-+\~_.</string>
 	<key>findIgnoreCase_iTerm</key>
 	<true/>
+	<key>findMode_iTerm</key>
+	<integer>0</integer>
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.0.10</string>
+	<string>3.1.beta.4</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
