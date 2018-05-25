@@ -64,10 +64,12 @@
       yarn:
     casks:
       - 1password
+      - anaconda
       - android-sdk
       - android-studio
       - androidtool
       - aquaterm
+      - base
       - charles
       - disk-inventory-x
       - docker
@@ -77,11 +79,11 @@
       - firefox
       - font-inconsolata-dz
       - genymotion
-      - go
       - google-chrome
       - google-chrome-canary
       - google-cloud-sdk
       - heroku
+      - hopper-disassembler
       - iterm2-beta
       - java
       - microsoft-office
@@ -99,7 +101,9 @@
       - spotify
       - spotify-notifications
       - ticktick
+      - transmission
       - tunnelblick
+      - utc-menu-clock
       - virtualbox
       - vlc
       - wireshark
