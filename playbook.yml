@@ -22,7 +22,9 @@
       fontconfig: build-from-source
       fswatch:
       git:
+      gnupg:
       gnuplot: with-aquaterm, with-qt4
+      gpg-agent:
       hbase:
       httpie:
       jq:
@@ -34,6 +36,7 @@
       nvm:
       octave:
       phantomjs:
+      pinentry-mac:
       postgresql:
       pow:
       pyenv:

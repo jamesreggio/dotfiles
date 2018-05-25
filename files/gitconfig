@@ -4,6 +4,7 @@
 [user]
 	name = James Reggio
 	email = james.reggio@gmail.com
+	signingkey = 610029D81B03A9F2C381845FD7B0D206CE500BE8
 [github]
 	user = jamesreggio
 [color]
@@ -61,3 +62,5 @@
 	stl  = stash list
 	stp  = stash pop
 	sts  = stash save
+[commit]
+	gpgsign = true
