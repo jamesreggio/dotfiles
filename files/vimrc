@@ -184,3 +184,9 @@ else
 endif
 
 let g:ctrlp_switch_buffer = 'e'
+
+" Polyglot
+let g:polyglot_disabled = ['js']
+
+" Neoformat
+autocmd BufWritePre *.js Neoformat
