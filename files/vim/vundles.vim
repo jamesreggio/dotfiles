@@ -27,10 +27,12 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-git'
 
 " Languages
-Plugin 'sheerun/vim-polyglot'
+Plugin 'othree/yajs.vim'
 Plugin 'othree/es.next.syntax.vim'
+Plugin 'sheerun/vim-polyglot'
 Plugin 'jtratner/vim-flavored-markdown'
 Plugin 'scrooloose/syntastic'
+Plugin 'sbdchd/neoformat'
 
 " Editing
 Plugin 'AndrewRadev/splitjoin.vim'
