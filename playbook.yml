@@ -15,15 +15,20 @@
       apgdiff:
       aspell:
       bash-completion:
+      cocoapods:
       colordiff:
+      curl: with-nghttp2
       dtrx:
       emacs-mac: with-spacemacs-icon
+      exiftool:
       fasd:
+      ffmpeg: with-fdk-aac
       fontconfig: build-from-source
       fswatch:
       git:
       gnupg:
       gnuplot: with-aquaterm, with-qt4
+      go:
       gpg-agent:
       hbase:
       httpie:
@@ -47,6 +52,7 @@
       rethinkdb:
       rlwrap:
       sleuthkit:
+      sox:
       the_silver_searcher:
       thrift:
       tmux:
