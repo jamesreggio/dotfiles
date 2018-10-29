@@ -80,7 +80,10 @@ if [ -n $has_brew ]; then
 else
   nvm_prefix=~/.nvm
 fi
-[ -x "$nvm_prefix/nvm.sh" ] && source "$nvm_prefix/nvm.sh"
+if [ -a "$nvm_prefix/nvm.sh" ]; then
+  source "$nvm_prefix/nvm.sh" 2>/dev/null
+  nvm use default >/dev/null
+fi
 unset nvm_prefix
 
 [ -x "$(which pyenv)" ] && eval "$(pyenv init -)"
