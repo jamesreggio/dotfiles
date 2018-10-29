@@ -92,6 +92,7 @@ nmap <silent> Q :q<cr>
 " Leaders
 let mapleader=","
 nmap <silent> <leader>w :w<cr>
+nmap <silent> <leader>W :noautocmd w<cr>
 nmap <silent> <leader>q :q<cr>
 nmap <silent> <leader>p :pwd<cr>
 nmap <silent> <leader><space> :let @/=''<cr>
