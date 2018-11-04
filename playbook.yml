@@ -8,63 +8,49 @@
     taps:
       - caskroom/fonts
       - caskroom/versions
-      - homebrew/science
-      - railwaycat/homebrew-emacsmacport
     brews:
       ansible:
-      apgdiff:
       aspell:
+      awscli:
       bash-completion:
       cocoapods:
       colordiff:
       curl: with-nghttp2
       dtrx:
-      emacs-mac: with-spacemacs-icon
       exiftool:
       fasd:
       ffmpeg: with-fdk-aac
       fontconfig: build-from-source
       fswatch:
       git:
+      gnu-sed: --with-default-names
+      gnu-tar: --with-default-names
       gnupg:
       gnuplot: with-aquaterm, with-qt4
       go:
-      gpg-agent:
-      hbase:
       httpie:
+      hub:
       jq:
-      leiningen:
-      macvim:
-      memcached:
-      mongodb:
-      mysql:
       nvm:
       octave:
-      phantomjs:
       pinentry-mac:
       postgresql:
-      pow:
       pyenv:
       rbenv-gemset:
       rbenv:
       reattach-to-user-namespace:
-      redis:
-      rethinkdb:
       rlwrap:
       sleuthkit:
       sox:
       the_silver_searcher:
-      thrift:
       tmux:
       tree:
       vim:
-      watch:
       watchman:
       wget:
       yarn:
     casks:
       - 1password
-      - anaconda
       - android-sdk
       - android-studio
       - androidtool
@@ -74,47 +60,32 @@
       - disk-inventory-x
       - docker
       - dropbox
-      - fabric
       - fastlane
       - firefox
       - font-inconsolata-dz
-      - genymotion
       - google-chrome
       - google-chrome-canary
-      - google-cloud-sdk
       - heroku
       - hopper-disassembler
       - iterm2-beta
       - java
-      - microsoft-office
-      - moom
       - ngrok
-      - paw
+      - notion
       - postico
       - principle
       - react-native-debugger
-      - robomongo
       - sketch
       - sketch-toolbox
+      - skitch
       - skype
       - slack
       - spotify
-      - spotify-notifications
-      - ticktick
       - transmission
-      - tunnelblick
       - utc-menu-clock
       - virtualbox
       - vlc
       - wireshark
     login_items:
-      - hbase
-      - memcached
-      - mongodb
-      - mysql
-      - postgresql
-      - redis
-      - rethinkdb
 
     directories:
       - .nvm
@@ -143,7 +114,6 @@
       src: hidden
 
     preferences:
-      - defaults delete "com.apple.universalaccess" "UserAssignableHotKeys"
       - defaults write "Apple Global Domain" "AppleActionOnDoubleClick" -string "Minimize"
       - defaults write "Apple Global Domain" "AppleEnableSwipeNavigateWithScrolls" -bool false
       - defaults write "Apple Global Domain" "AppleICUForce24HourTime" -bool true
@@ -205,9 +175,6 @@
       - defaults write "com.apple.terminal" "Default Window Settings" -string "base16-tomorrow"
       - defaults write "com.apple.terminal" "Startup Window Settings" -string "base16-tomorrow"
       - defaults write "com.apple.terminal" "Window Settings" -dict-add "base16-tomorrow" "$(cat {{ base }}/preferences/base16-tomorrow.plist)"
-      - defaults write "com.apple.universalaccess" "UserAssignableHotKeys" -bool false
-      - defaults write "com.apple.universalaccess" "closeViewScrollWheelToggle" -bool true
-      - defaults write "com.apple.universalaccess" "closeViewSmoothImages" -bool false
       - defaults write "com.googlecode.iterm2" LoadPrefsFromCustomFolder -bool true
       - defaults write "com.googlecode.iterm2" PrefsCustomFolder "{{ home }}/.iterm2"
 
@@ -216,4 +183,4 @@
     - include: tasks/files.yml
     - include: tasks/vim.yml
     - include: tasks/preferences.yml
-      when: "{{ lookup('env', 'PREFS') != '0' }}"
+      when: lookup('env', 'PREFS') != '0'

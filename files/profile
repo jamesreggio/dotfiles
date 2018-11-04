@@ -6,11 +6,14 @@ prepend_to_path() {
 }
 
 append_to_path ./node_modules/.bin
-append_to_path $HOME/.fastlane/bin
 append_to_path $HOME/bin
-append_to_path /usr/local/anaconda3/bin
 
-export ANDROID_SDK=$HOME/Library/Android/sdk
-export ANDROID_NDK=$HOME/Library/Android/ndk-r10e
-append_to_path $ANDROID_SDK/tools
-append_to_path $ANDROID_SDK/platform-tools
+# Convoy
+
+append_to_path $HOME/src/convoy/ops/.tools
+
+export PGHOST=localhost
+export PGPORT=5432
+
+export VAULT_CAPATH=$HOME/src/convoy/ops/credentials/convoy-vault-ca.cert.pem
+export VAULT_ADDR=https://10.10.27.22:8200

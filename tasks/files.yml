@@ -14,7 +14,7 @@
 
 - name: backup files
   with_items: "{{ files_stat.results }}"
-  when: "{{ item.stat.exists }} and not {{ item.stat.islnk }}"
+  when: item.stat.exists and not item.stat.islnk
   command: mv "{{ item.stat.path }}" "{{ base }}/backups/{{ item.item.key }}.{{ ansible_date_time.epoch }}"
 
 - name: link files

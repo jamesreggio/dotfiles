@@ -5,7 +5,7 @@
 
 - name: install homebrew
   shell: ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-  when: "{{ brew_stat.stat.exists }} == false"
+  when: not brew_stat.stat.exists
 
 - name: update homebrew
   homebrew: update_homebrew=yes
