@@ -13,7 +13,7 @@
 [grep]
 	lineNumber = true
 [push]
-	default = upstream
+	default = current
 [rebase]
 	autosquash = true
 [rerere]
@@ -50,8 +50,7 @@
 	m    = merge
 	man  = help
 	p    = push
-	po   = push origin
-	pom  = push origin master
+	pf   = push --force
 	pa   = push --mirror
 	pu   = pull --ff-only
 	r    = reset
@@ -69,3 +68,5 @@
 	stl  = stash list
 	stp  = stash pop
 	sts  = stash save
+[protocol]
+	version = 2
