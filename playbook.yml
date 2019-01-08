@@ -19,6 +19,7 @@
       dtrx:
       exiftool:
       fasd:
+      fd:
       ffmpeg: with-fdk-aac
       fontconfig: build-from-source
       fswatch:
@@ -51,6 +52,7 @@
       yarn:
     casks:
       - 1password
+      - android-ndk
       - android-sdk
       - android-studio
       - androidtool
@@ -85,6 +87,7 @@
       - virtualbox
       - vlc
       - wireshark
+      - zeplin
     login_items:
 
     directories:
