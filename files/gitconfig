@@ -28,13 +28,14 @@
 	bm   = branch -m
 	c    = commit
 	cf   = commit --no-verify
+	cm   = commit -m
+	cmf  = commit --no-verify -m
 	ca   = commit -a
 	caf  = commit -a --no-verify
 	cam  = commit -a -m
 	camf = commit -a --no-verify -m
-	cad  = commit --amend
-	cadf = commit --amend --no-verify
-	cm   = commit -m
+	cd   = commit --amend
+	cdf  = commit --amend --no-verify
 	co   = checkout
 	cob  = checkout -b
 	coo  = checkout --orphan
@@ -54,6 +55,7 @@
 	pa   = push --mirror
 	pu   = pull --ff-only
 	r    = reset
+	rr   = reset HEAD^
 	rh   = reset --hard
 	rp   = reset -p
 	rb   = rebase
@@ -68,5 +70,9 @@
 	stl  = stash list
 	stp  = stash pop
 	sts  = stash save
+	sh   = show
+	shs  = show --stat
 [protocol]
 	version = 2
+[credential]
+	helper = osxkeychain
