@@ -190,4 +190,4 @@ let g:ctrlp_switch_buffer = 'e'
 let g:polyglot_disabled = ['js']
 
 " Neoformat
-autocmd BufWritePre *.js Neoformat
+autocmd BufWritePre *.json,*.js,*.jsx,*.ts,*.tsx Neoformat prettier
