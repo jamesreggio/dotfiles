@@ -107,6 +107,7 @@
       vim:
       vimrc:
       gvimrc:
+      vscode.json: Library/Application Support/Code/User/settings.json
     visibility:
       Documents: hidden
       Movies: hidden
@@ -182,8 +183,8 @@
       - defaults write "com.googlecode.iterm2" PrefsCustomFolder "{{ home }}/.iterm2"
 
   tasks:
-    - include: tasks/homebrew.yml
+    # - include: tasks/homebrew.yml
     - include: tasks/files.yml
-    - include: tasks/vim.yml
-    - include: tasks/preferences.yml
-      when: lookup('env', 'PREFS') != '0'
+    # - include: tasks/vim.yml
+    # - include: tasks/preferences.yml
+    #   when: lookup('env', 'PREFS') != '0'
