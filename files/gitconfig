@@ -1,3 +1,5 @@
+[protocol]
+	version = 2
 [core]
 	editor = vim
 	excludesfile = ~/.gitignore
@@ -6,6 +8,8 @@
 	email = james.reggio@gmail.com
 [github]
 	user = jamesreggio
+[credential]
+	helper = osxkeychain
 [commit]
 	gpgsign = true
 [color]
@@ -72,7 +76,3 @@
 	sts  = stash save
 	sh   = show
 	shs  = show --stat
-[protocol]
-	version = 2
-[credential]
-	helper = osxkeychain

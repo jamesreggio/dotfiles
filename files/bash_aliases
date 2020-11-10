@@ -8,8 +8,8 @@ alias ll="l"
 alias m="less"
 alias more="m"
 
-alias pbc="pbcopy"
-alias pbp="pbpaste"
+alias pc="pbcopy"
+alias pp="pbpaste"
 
 alias g="git"
 alias h="http"

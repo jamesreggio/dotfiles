@@ -86,7 +86,6 @@ if [ -a "$nvm_prefix/nvm.sh" ]; then
 fi
 unset nvm_prefix
 
-[ -x "$(which pyenv)" ] && eval "$(pyenv init -)"
 [ -x "$(which rbenv)" ] && eval "$(rbenv init -)"
 [ -x "$(which fasd)" ] && eval "$(fasd --init auto)"
 [ -z "$(pgrep gpg-agent)" ] && eval "$(gpg-agent --daemon)"

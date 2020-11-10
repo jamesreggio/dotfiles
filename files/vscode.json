@@ -90,4 +90,5 @@
   "javascript.updateImportsOnFileMove.enabled": "always",
   "typescript.updateImportsOnFileMove.enabled": "always",
   "prettier.requireConfig": true,
+  "codetour.showMarkers": true,
 }

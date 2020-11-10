@@ -6,6 +6,8 @@
 	<true/>
 	<key>AllowClipboardAccess</key>
 	<false/>
+	<key>AlternateMouseScroll</key>
+	<true/>
 	<key>AnimateDimming</key>
 	<false/>
 	<key>AppleAntiAliasingThreshold</key>
@@ -401,6 +403,8 @@
 			<string></string>
 		</dict>
 	</dict>
+	<key>HapticFeedbackForEsc</key>
+	<false/>
 	<key>HiddenAFRStrokeThickness</key>
 	<real>0.0</real>
 	<key>HiddenAdvancedFontRendering</key>
@@ -451,6 +455,11 @@
 	<false/>
 	<key>NSScrollViewShouldScrollUnderTitlebar</key>
 	<false/>
+	<key>NSSplitView Subview Frames NSColorPanelSplitView</key>
+	<array>
+		<string>0.000000, 0.000000, 224.000000, 258.000000, NO, NO</string>
+		<string>0.000000, 259.000000, 224.000000, 48.000000, NO, NO</string>
+	</array>
 	<key>NSTableView Columns v2 KeyBingingTable</key>
 	<data>
 	YnBsaXN0MDDUAQIDBAUGNjdYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3AS
@@ -474,16 +483,23 @@
 	</data>
 	<key>NSTableView Supports v2 KeyBingingTable</key>
 	<true/>
+	<key>NSToolbar Configuration com.apple.NSColorPanel</key>
+	<dict>
+		<key>TB Is Shown</key>
+		<integer>1</integer>
+	</dict>
 	<key>NSWindow Frame SUStatusFrame</key>
 	<string>654 630 400 129 0 0 1680 1027 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>512 526 620 392 0 0 1680 1027 </string>
+	<string>970 768 620 392 0 0 2560 1417 </string>
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>596 372 928 394 0 0 2560 1440 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>279 177 1099 762 0 0 1680 1027 </string>
+	<string>285 412 1090 615 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>260 245 1090 615 0 0 1680 1027 </string>
+	<string>18 485 1090 615 0 0 2560 1417 </string>
+	<key>NSWindow Frame iTerm Window 2</key>
+	<string>233 78 1090 615 0 0 1680 1027 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -1314,8 +1330,17 @@
 		<string>3.3.7beta2</string>
 		<string>3.3.10beta1</string>
 		<string>3.3.7beta4</string>
+		<string>3.3.10beta2</string>
 		<string>3.3.8beta1</string>
+		<string>3.3.10beta3</string>
 	</array>
+	<key>NoSyncFrame_SessionsPreferences</key>
+	<dict>
+		<key>screenFrame</key>
+		<string>{{0, 0}, {1680, 1050}}</string>
+		<key>topLeft</key>
+		<string>{537, 907}</string>
+	</dict>
 	<key>NoSyncHaveRequestedFullDiskAccess</key>
 	<true/>
 	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
@@ -1323,7 +1348,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>9D4F121F-7287-4DBE-A66B-80AACF757A90</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>55</integer>
+	<integer>64</integer>
 	<key>NoSyncNextAnnoyanceTime</key>
 	<real>578343138.12850797</real>
 	<key>NoSyncOnboardingWindowHasBeenShown</key>
@@ -2136,11 +2161,11 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-03-04T17:28:12Z</date>
+	<date>2020-05-05T18:13:03Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateGroupIdentifier</key>
-	<integer>280543485</integer>
+	<integer>1659387647</integer>
 	<key>SUUpdateRelaunchingMarker</key>
 	<true/>
 	<key>SavePasteHistory</key>
@@ -2150,6 +2175,8 @@
 	<key>ShowPaneTitles</key>
 	<true/>
 	<key>SmartPlacement</key>
+	<false/>
+	<key>SoundForEsc</key>
 	<false/>
 	<key>SplitPaneDimmingAmount</key>
 	<real>0.40000000596046448</real>
@@ -2173,6 +2200,8 @@
 	<true/>
 	<key>UseLionStyleFullscreen</key>
 	<true/>
+	<key>VisualIndicatorForEsc</key>
+	<false/>
 	<key>WindowNumber</key>
 	<false/>
 	<key>WindowStyle</key>
@@ -2186,7 +2215,7 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.3.8</string>
+	<string>3.3.10beta3</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
