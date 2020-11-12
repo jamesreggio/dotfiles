@@ -6,8 +6,8 @@
     user: "{{ lookup('env', 'USER') }}"
 
     taps:
-      - caskroom/fonts
-      - caskroom/versions
+      - homebrew/cask-fonts
+      - homebrew/cask-versions
     brews:
       ansible:
       awscli:
@@ -39,16 +39,13 @@
       - 1password
       - base
       - charles
-      - disk-inventory-x
       - docker
       - figma
       - firefox
-      - font-inconsolata-dz
+      - font-inconsolata-g
       - google-chrome
       - google-chrome-canary
-      - hopper-disassembler
       - iterm2
-      - java
       - ngrok
       - postico
       - signal
@@ -59,7 +56,7 @@
       - visual-studio-code
       - vlc
       - zoomus
-    login_items:
+    login_items: []
 
     directories:
       - .nvm
@@ -71,13 +68,13 @@
       bin: bin
       gitconfig:
       gitignore:
+      gvimrc:
       inputrc:
       iterm2:
       profile:
       tmux.conf:
       vim:
       vimrc:
-      gvimrc:
       vscode.json: Library/Application Support/Code/User/settings.json
     visibility:
       # Documents: hidden
@@ -89,73 +86,70 @@
       src: hidden
 
     preferences:
-      # - defaults write "Apple Global Domain" "AppleActionOnDoubleClick" -string "Minimize"
-      # - defaults write "Apple Global Domain" "AppleEnableSwipeNavigateWithScrolls" -bool false
-      # - defaults write "Apple Global Domain" "AppleICUForce24HourTime" -bool true
-      # - defaults write "Apple Global Domain" "AppleShowAllExtensions" -bool true
-      # - defaults write "Apple Global Domain" "AppleSpacesSwitchOnActivate" -bool false
-      # - defaults write "Apple Global Domain" "CGDisableCursorLocationMagnification" -bool true
-      # - defaults write "Apple Global Domain" "NSCloseAlwaysConfirmsChanges" -bool true
-      # - defaults write "Apple Global Domain" "NSNavPanelExpandedStateForSaveMode" -bool true
-      # - defaults write "Apple Global Domain" "NSTableViewDefaultSizeMode" -int 1
-      # - defaults write "Apple Global Domain" "NSUserDictionaryReplacementItems" "$(cat {{ base }}/preferences/replacement-items.plist)"
-      # - defaults write "Apple Global Domain" "NSUserKeyEquivalents" "$(cat {{ base }}/preferences/user-key-equivalents.plist)"
-      # - defaults write "Apple Global Domain" "PMPrintingExpandedStateForPrint" -bool true
-      # - defaults write "Apple Global Domain" "com.apple.sound.beep.feedback" -int 1
-      # - defaults write "Apple Global Domain" "com.apple.trackpad.scaling" -float 1
-      # - defaults write "Apple Global Domain" "userMenuExtraStyle" -int 2
-      # - defaults write "com.apple.AppleMultitouchTrackpad" "ActuationStrength" -int 0
-      # - defaults write "com.apple.AppleMultitouchTrackpad" "HIDScrollZoomModifierMask" -int 262144
-      # - defaults write "com.apple.AppleMultitouchTrackpad" "TrackpadThreeFingerHorizSwipeGesture" -int 1
-      # - defaults write "com.apple.Safari" "IncludeDevelopMenu" -bool true
-      # - defaults write "com.apple.Safari" "WebKitDeveloperExtrasEnabledPreferenceKey" -bool true
-      # - defaults write "com.apple.Safari" "com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled" -bool true
-      # - defaults write "com.apple.dock" "autohide" -bool true
-      # - defaults write "com.apple.dock" "largesize" -int 55
-      # - defaults write "com.apple.dock" "magnification" -bool true
-      # - defaults write "com.apple.dock" "mru-spaces" -bool false
-      # - defaults write "com.apple.dock" "orientation" -string "right"
-      # - defaults write "com.apple.dock" "persistent-apps" -array
-      # - defaults write "com.apple.dock" "showAppExposeGestureEnabled" -bool true
-      # - defaults write "com.apple.dock" "showLaunchpadGestureEnabled" -bool false
-      # - defaults write "com.apple.dock" "tilesize" -int 38
-      # - defaults write "com.apple.dock" "wvous-br-corner" -int 6
-      # - defaults write "com.apple.dock" "wvous-br-modifier" -int 0
-      # - defaults write "com.apple.dock" "wvous-br-modifier" -int 0
-      # - defaults write "com.apple.dock" "wvous-tr-corner" -int 5
-      # - defaults write "com.apple.driver.AppleBluetoothMultitouch.trackpad" "HIDScrollZoomModifierMask" -int 262144
-      # - defaults write "com.apple.driver.AppleBluetoothMultitouch.trackpad" "TrackpadThreeFingerHorizSwipeGesture" -int 1
-      # - defaults write "com.apple.finder" "FXDefaultSearchScope" -string "SCsp"
-      # - defaults write "com.apple.finder" "FXEnableExtensionChangeWarning" -bool false
-      # - defaults write "com.apple.finder" "FXPreferredViewStyle" -string "clmv"
-      # - defaults write "com.apple.finder" "NewWindowTarget" -string "PfHm"
-      # - defaults write "com.apple.finder" "NewWindowTargetPath" -string "file://{{ home }}"
-      # - defaults write "com.apple.finder" "ShowExternalHardDrivesOnDesktop" -bool false
-      # - defaults write "com.apple.finder" "ShowHardDrivesOnDesktop" -bool false
-      # - defaults write "com.apple.finder" "ShowPreviewPane" -bool false
-      # - defaults write "com.apple.finder" "ShowRecentTags" -bool false
-      # - defaults write "com.apple.finder" "ShowRemovableMediaOnDesktop" -bool false
-      # - defaults write "com.apple.finder" "ShowSidebar" -bool true
-      # - defaults write "com.apple.finder" QLEnableTextSelection -bool true
-      # - defaults write "com.apple.iCal" "TimeToLeaveEnabled" -bool false
-      # - defaults write "com.apple.iCal" "TimeZone support enabled" -bool true
-      # - defaults write "com.apple.iCal" "add holiday calendar" -bool false
-      # - defaults write "com.apple.iCal" "display birthdays calendar" -bool false
-      # - defaults write "com.apple.ichat" "kPromptEnableReadRecipts" -bool true
-      # - defaults write "com.apple.menuextra.clock" "DateFormat" -string "EEE MMM d  H:mm"
-      # - defaults write "com.apple.messageshelper.FavoritesController" "FaceTimeFavoritesDNDEnabled" -bool false
-      # - defaults write "com.apple.messageshelper.FavoritesController" "FaceTimeTwoTimeCallthroughEnabled" -bool true
-      # - defaults write "com.apple.screensaver" "askForPasswordDelay" -int 5
-      # - defaults write "com.apple.systempreferences" "NSQuitAlwaysKeepsWindows" -bool false
-      # - defaults write "com.apple.terminal" "Default Window Settings" -string "base16-tomorrow"
-      # - defaults write "com.apple.terminal" "Startup Window Settings" -string "base16-tomorrow"
-      # - defaults write "com.apple.terminal" "Window Settings" -dict-add "base16-tomorrow" "$(cat {{ base }}/preferences/base16-tomorrow.plist)"
-      # - defaults write "com.googlecode.iterm2" LoadPrefsFromCustomFolder -bool true
-      # - defaults write "com.googlecode.iterm2" PrefsCustomFolder "{{ home }}/.iterm2"
+      - defaults -currentHost write NSGlobalDomain "AppleActionOnDoubleClick" -string "Minimize"
+      - defaults -currentHost write NSGlobalDomain "AppleEnableSwipeNavigateWithScrolls" -bool false
+      - defaults -currentHost write NSGlobalDomain "AppleICUForce24HourTime" -bool true
+      - defaults -currentHost write NSGlobalDomain "AppleShowAllExtensions" -bool true
+      - defaults -currentHost write NSGlobalDomain "AppleSpacesSwitchOnActivate" -bool true
+      - defaults -currentHost write NSGlobalDomain "CGDisableCursorLocationMagnification" -bool true
+      - defaults -currentHost write NSGlobalDomain "NSCloseAlwaysConfirmsChanges" -bool true
+      - defaults -currentHost write NSGlobalDomain "NSNavPanelExpandedStateForSaveMode" -bool true
+      - defaults -currentHost write NSGlobalDomain "NSTableViewDefaultSizeMode" -int 1
+      - defaults -currentHost write NSGlobalDomain "NSUserDictionaryReplacementItems" "$(cat {{ base }}/preferences/replacement-items.plist)"
+      - defaults -currentHost write NSGlobalDomain "NSUserKeyEquivalents" "$(cat {{ base }}/preferences/user-key-equivalents.plist)"
+      - defaults -currentHost write NSGlobalDomain "PMPrintingExpandedStateForPrint" -bool true
+      - defaults -currentHost write NSGlobalDomain "com.apple.sound.beep.feedback" -int 1
+      - defaults -currentHost write NSGlobalDomain "com.apple.trackpad.scaling" -float 1
+      - defaults -currentHost write NSGlobalDomain "com.apple.trackpad.threeFingerHorizSwipeGesture" -int 1
+      - defaults write "com.apple.AppleMultitouchTrackpad" "ActuationStrength" -int 0
+      - defaults write "com.apple.AppleMultitouchTrackpad" "HIDScrollZoomModifierMask" -int 262144
+      - defaults write "com.apple.AppleMultitouchTrackpad" "TrackpadThreeFingerHorizSwipeGesture" -int 1
+      - defaults write "com.apple.Safari" "IncludeDevelopMenu" -bool true
+      - defaults write "com.apple.Safari" "WebKitDeveloperExtrasEnabledPreferenceKey" -bool true
+      - defaults write "com.apple.Safari" "com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled" -bool true
+      - defaults write "com.apple.bird" "optimize-storage" -bool false
+      - defaults write "com.apple.dock" "autohide" -bool true
+      - defaults write "com.apple.dock" "expose-group-apps" -bool false
+      - defaults write "com.apple.dock" "largesize" -int 55
+      - defaults write "com.apple.dock" "magnification" -bool true
+      - defaults write "com.apple.dock" "mru-spaces" -bool false
+      - defaults write "com.apple.dock" "orientation" -string "right"
+      - defaults write "com.apple.dock" "persistent-apps" -array
+      - defaults write "com.apple.dock" "recent-apps" -array
+      - defaults write "com.apple.dock" "show-recents" -bool false
+      - defaults write "com.apple.dock" "showAppExposeGestureEnabled" -bool true
+      - defaults write "com.apple.dock" "showLaunchpadGestureEnabled" -bool false
+      - defaults write "com.apple.dock" "tilesize" -int 38
+      - defaults write "com.apple.dock" "wvous-br-corner" -int 6
+      - defaults write "com.apple.dock" "wvous-br-modifier" -int 0
+      - defaults write "com.apple.dock" "wvous-tr-corner" -int 5
+      - defaults write "com.apple.dock" "wvous-tr-modifier" -int 0
+      - defaults write "com.apple.driver.AppleBluetoothMultitouch.trackpad" "HIDScrollZoomModifierMask" -int 262144
+      - defaults write "com.apple.driver.AppleBluetoothMultitouch.trackpad" "TrackpadThreeFingerHorizSwipeGesture" -int 1
+      - defaults write "com.apple.finder" "FXDefaultSearchScope" -string "SCsp"
+      - defaults write "com.apple.finder" "FXEnableExtensionChangeWarning" -bool false
+      - defaults write "com.apple.finder" "FXPreferredViewStyle" -string "clmv"
+      - defaults write "com.apple.finder" "NewWindowTarget" -string "PfHm"
+      - defaults write "com.apple.finder" "NewWindowTargetPath" -string "file://{{ home }}"
+      - defaults write "com.apple.finder" "ShowExternalHardDrivesOnDesktop" -bool false
+      - defaults write "com.apple.finder" "ShowHardDrivesOnDesktop" -bool false
+      - defaults write "com.apple.finder" "ShowPreviewPane" -bool false
+      - defaults write "com.apple.finder" "ShowRecentTags" -bool false
+      - defaults write "com.apple.finder" "ShowRemovableMediaOnDesktop" -bool false
+      - defaults write "com.apple.finder" "ShowSidebar" -bool true
+      - defaults write "com.apple.finder" QLEnableTextSelection -bool true
+      - defaults write "com.apple.menuextra.clock" "DateFormat" -string "EEE MMM d  H:mm"
+      - defaults write "com.apple.screensaver" "askForPasswordDelay" -int 5
+      - defaults write "com.apple.systempreferences" "NSQuitAlwaysKeepsWindows" -bool false
+      - defaults write "com.apple.terminal" "Default Window Settings" -string "base16-tomorrow"
+      - defaults write "com.apple.terminal" "Startup Window Settings" -string "base16-tomorrow"
+      - defaults write "com.apple.terminal" "Window Settings" -dict-add "base16-tomorrow" "$(cat {{ base }}/preferences/base16-tomorrow.plist)"
+      - defaults write "com.googlecode.iterm2" LoadPrefsFromCustomFolder -bool true
+      - defaults write "com.googlecode.iterm2" PrefsCustomFolder "{{ home }}/.iterm2"
 
   tasks:
-    - include: tasks/homebrew.yml
-    - include: tasks/files.yml
-    - include: tasks/vim.yml
+    # - include: tasks/homebrew.yml
+    # - include: tasks/files.yml
+    # - include: tasks/vim.yml
     - include: tasks/preferences.yml
-      when: lookup('env', 'PREFS') != '0'
+    #  when: lookup('env', 'PREFS') != '0'

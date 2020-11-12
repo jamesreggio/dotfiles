@@ -1,5 +1,5 @@
 " Theme
-set guifont=Inconsolata-dz:h15,Monaco:h15
+set guifont=Inconsolata-g:h15,Monaco:h15
 
 " Scrolling
 set guioptions-=l
