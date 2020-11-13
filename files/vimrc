@@ -64,7 +64,7 @@ set undoreload=10000
 
 " Keyboard
 set backspace=eol,indent,start
-set pastetoggle=<C-x>
+set pastetoggle=<C-q>
 set ttimeoutlen=50
 
 " Navigation
@@ -97,35 +97,23 @@ nmap <silent> <leader>q :q<cr>
 nmap <silent> <leader>p :pwd<cr>
 nmap <silent> <leader><space> :let @/=''<cr>
 nmap <silent> <leader>s :setlocal spell! spelllang=en_us<cr>
-nmap <silent> <leader>c :cclose<cr>
-nmap <silent> <leader>o :copen<cr>
+nmap <silent> <leader>c :Gblame<cr>
 nmap <silent> <leader>e :tabnew<cr>
 vmap <silent> <leader>y "+y
 
 nmap <silent> <C-n> :NERDTreeFind<cr>
-nmap <silent> <leader>n :NERDTreeToggle<cr>
-nmap <silent> <leader>u :GundoToggle<cr>
-nmap <silent> <leader>t :CtrlP<cr>
+vmap <silent> <C-s> :sort<cr>
+nmap <silent> <leader>n :NERDTreeTabsToggle<cr>
+nmap <silent> <leader>u :UndotreeToggle<cr>
 nmap <silent> <leader>0 :call ToggleColorColumn()<cr>
-nmap <silent> <leader>h :call ToggleHardTabs()<cr>
 
 nmap <leader>a :Ag! ""<left>
-nmap <silent>K :Ag! <cword><cr>
+nmap <silent> <C-k> :Ag! <cword><cr>
 nmap <leader>rr :source %<cr>
 nmap <leader>rb :VundleInstall<cr>
 
-" Hard tabs
-function! ToggleHardTabs()
-  if get(b:, 'hardtabs', 0)
-    setlocal ts< sts< sw<
-    setlocal expandtab<
-    let b:hardtabs=0
-  else
-    setlocal ts=4 sts=4 sw=4
-    setlocal noexpandtab
-    let b:hardtabs=1
-  endif
-endfunction
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'jsformatter'
 
 " Color column
 function! ToggleColorColumn()
@@ -174,8 +162,7 @@ autocmd VimEnter * call SetFormatOptions()
 
 " NERDTree
 let g:NERDTreeWinSize=36
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
+let g:nerdtree_tabs_open_on_console_startup=2
 
 " CtrlP
 if executable('ag')
@@ -187,9 +174,3 @@ else
 endif
 
 let g:ctrlp_switch_buffer = 'e'
-
-" Polyglot
-let g:polyglot_disabled = ['js']
-
-" Neoformat
-autocmd BufWritePre *.json,*.js,*.jsx,*.ts,*.tsx Neoformat prettier

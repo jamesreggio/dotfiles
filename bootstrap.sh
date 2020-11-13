@@ -1,5 +1,4 @@
 #!/bin/sh
-set -x
 set -e
 
 # Clone dotfiles
@@ -10,7 +9,7 @@ mkdir -p "$dotfiles"
 cd "$dotfiles"
 
 # Install homebrew
-which brew || ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+which brew || bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 # Run ansible
 brew install ansible

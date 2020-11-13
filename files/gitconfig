@@ -10,8 +10,8 @@
 	user = jamesreggio
 [credential]
 	helper = osxkeychain
-[commit]
-	gpgsign = true
+; [commit]
+; 	gpgsign = true
 [color]
 	ui = auto
 [grep]

@@ -1,38 +1,34 @@
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
-" TODO:
-" configure syntastic
-" use bufexplorer
-" use vim-surround
-
-Plugin 'sjl/gundo.vim'
+" Commands
 Plugin 'goldfeld/ctrlr.vim'
 Plugin 'vim-scripts/sudo.vim'
+Plugin 'danro/rename.vim'
 
-" Navigation
-Plugin 'vim-scripts/matchit.zip'
-Plugin 'jeetsukumaran/vim-indentwise'
+" Motion
 Plugin 'justinmk/vim-sneak'
+Plugin 'easymotion/vim-easymotion'
+Plugin 'jeetsukumaran/vim-indentwise'
 
 " Files
-Plugin 'danro/rename.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'jlanzarotta/bufexplorer'
+Plugin 'mbbill/undotree'
 
-" git
+" Git
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-git'
 
 " Languages
-Plugin 'othree/yajs.vim'
-Plugin 'othree/es.next.syntax.vim'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'jtratner/vim-flavored-markdown'
 Plugin 'scrooloose/syntastic'
-Plugin 'sbdchd/neoformat'
+Plugin 'Quramy/tsuquyomi'
+Plugin 'slashmili/alchemist.vim'
+Plugin 'Shougo/vimproc.vim'
 
 " Editing
 Plugin 'AndrewRadev/splitjoin.vim'
@@ -41,8 +37,17 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 
 " Search
+" steve uses ack
 Plugin 'rking/ag.vim'
 Plugin 'vim-scripts/IndexedSearch'
 Plugin 'nelstrom/vim-visual-star-search'
+
+Plugin 'tpope/vim-obsession'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+
+" airline, airline-themes -- status bar
+" autocomplete: CTRL-x o
+" tsuq CTRL-] CTRL-t CTRL-o
 
 call vundle#end()
