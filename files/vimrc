@@ -86,7 +86,7 @@ noremap <C-h> <C-w>h
 noremap <C-l> <C-w>l
 
 nnoremap vv <C-w>v
-" nnoremap ss <C-w>s
+nnoremap zz <C-w>s
 nmap <silent> Q :q<cr>
 
 " Leaders
@@ -99,6 +99,7 @@ nmap <silent> <leader><space> :let @/=''<cr>
 nmap <silent> <leader>s :setlocal spell! spelllang=en_us<cr>
 nmap <silent> <leader>c :Gblame<cr>
 nmap <silent> <leader>e :tabnew<cr>
+nmap <silent> <leader>t :terminal ++curwin<cr>
 vmap <silent> <leader>y "+y
 
 nmap <silent> <C-n> :NERDTreeFind<cr>
@@ -108,12 +109,13 @@ nmap <silent> <leader>u :UndotreeToggle<cr>
 nmap <silent> <leader>0 :call ToggleColorColumn()<cr>
 
 nmap <leader>a :Ag! ""<left>
-nmap <silent> <C-k> :Ag! <cword><cr>
+nmap <silent>K :Ag! <cword><cr>
 nmap <leader>rr :source %<cr>
 nmap <leader>rb :VundleInstall<cr>
 
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#formatter = 'jsformatter'
+let g:airline#extensions#tabline#enabled=1
+let g:airline#extensions#tabline#formatter='jsformatter'
+let g:airline_theme='minimalist'
 
 " Color column
 function! ToggleColorColumn()
