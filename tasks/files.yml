@@ -1,10 +1,4 @@
 ---
-- name: create directories
-  with_items: "{{ directories }}"
-  file: >
-    path="{{ home }}/{{ item }}"
-    state=directory
-
 - name: stat files
   with_dict: "{{ files }}"
   stat: >

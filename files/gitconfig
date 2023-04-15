@@ -6,12 +6,15 @@
 [user]
 	name = James Reggio
 	email = james.reggio@gmail.com
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIP6y3xp5Mf8DfQzt15JEya+Eb4OaqDg0+0iArO18WzDm
 [github]
 	user = jamesreggio
-[credential]
-	helper = osxkeychain
-; [commit]
-; 	gpgsign = true
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+[commit]
+	gpgsign = true
 [color]
 	ui = auto
 [grep]
@@ -42,7 +45,6 @@
 	cdf  = commit --amend --no-verify
 	co   = checkout
 	cob  = checkout -b
-	coo  = checkout --orphan
 	cp   = cherry-pick
 	d    = diff
 	dc   = diff --cached
@@ -50,8 +52,8 @@
 	g    = grep
 	l    = log --pretty=format:"%C(bold\\ blue)%h\\ %Creset%s%C(yellow)%d" --decorate
 	ls   = log --pretty=format:"%C(bold\\ blue)%h\\ %C(cyan)%<(15,trunc)%an\\ %Creset%s%C(yellow)%d" --decorate
-	ld   = log --pretty=format:"%C(bold\\ blue)%h\\ %C(cyan)%<(15,trunc)%ad\\ %Creset%s%C(yellow)%d" --decorate --date=short
-	ldr  = log --pretty=format:"%C(bold\\ blue)%h\\ %C(cyan)%<(15,trunc)%ad\\ %Creset%s%C(yellow)%d" --decorate --date=relative
+	ld   = log --pretty=format:"%C(bold\\ blue)%h\\ %C(cyan)%<(10,trunc)%ad\\ %Creset%s%C(yellow)%d" --decorate --date=short
+	ldr  = log --pretty=format:"%C(bold\\ blue)%h\\ %C(cyan)%<(21,trunc)%ad\\ %Creset%s%C(yellow)%d" --decorate --date=relative
 	m    = merge
 	man  = help
 	p    = push

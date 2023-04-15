@@ -37,7 +37,6 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 
 " Search
-" steve uses ack
 Plugin 'rking/ag.vim'
 Plugin 'vim-scripts/IndexedSearch'
 Plugin 'nelstrom/vim-visual-star-search'
@@ -45,9 +44,5 @@ Plugin 'nelstrom/vim-visual-star-search'
 Plugin 'tpope/vim-obsession'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-
-" airline, airline-themes -- status bar
-" autocomplete: CTRL-x o
-" tsuq CTRL-] CTRL-t CTRL-o
 
 call vundle#end()

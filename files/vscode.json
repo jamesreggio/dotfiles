@@ -1,6 +1,6 @@
 {
   /**
-   * Editor.
+   * Editor
    */
 
   "editor.tabSize": 2,
@@ -8,11 +8,9 @@
   "editor.insertSpaces": true,
   "editor.minimap.enabled": false,
   "editor.formatOnSave": true,
-  "editor.fontSize": 14,
 
-  "diffEditor.ignoreTrimWhitespace": true,
-  "workbench.activityBar.visible": true,
-  "terminal.integrated.fontSize": 13,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "terminal.integrated.fontSize": 12,
   "window.zoomLevel": 0,
 
   "files.exclude": {
@@ -20,7 +18,7 @@
   },
 
   /**
-   * Vim.
+   * Vim
    */
 
   "vim.sneak": true,
@@ -90,5 +88,16 @@
   "javascript.updateImportsOnFileMove.enabled": "always",
   "typescript.updateImportsOnFileMove.enabled": "always",
   "prettier.requireConfig": true,
-  "codetour.showMarkers": true,
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  /**
+   * Additional (unclassified) settings
+   */
+
+  "editor.inlineSuggest.enabled": true
 }

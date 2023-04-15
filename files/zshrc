@@ -1,0 +1,84 @@
+# Interactivity check
+[ -z "$PS1" ] && return
+[ -x "$(command -v brew)" ] && has_brew=yes
+
+# Shell
+set -o vi
+bindkey '^A' beginning-of-line
+bindkey '^E' end-of-line
+setopt auto_cd
+
+# History
+setopt histappend
+HISTCONTROL=ignoreboth
+HISTSIZE=100000
+SAVEHIST=100000
+PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
+
+# add some readline keys back
+
+# Completion
+[ -n "$has_brew" ] && fpath=( $(brew --prefix)/share/zsh/site-functions $fpath )
+zstyle ':completion:*' use-cache on
+zstyle ':completion:*' cache-path ~/.zsh/cache/$HOST
+zstyle ':completion:*' rehash true
+autoload -Uz compinit
+compinit
+
+# Color
+case "$TERM" in
+  xterm-color) color_shell=yes;;
+  xterm-256color) color_shell=yes;;
+  screen-256color) color_shell=yes;;
+esac
+
+if [ -n "$color_shell" ]; then
+  # Prompt
+  if [ "$USER" = root ]; then
+    user_color=red
+  else
+    user_color=blue
+  fi
+
+  autoload -Uz add-zsh-hook vcs_info
+  add-zsh-hook precmd vcs_info
+  setopt prompt_subst
+
+  zstyle ':vcs_info:*' check-for-changes true
+  zstyle ':vcs_info:*' unstagedstr '*'
+  zstyle ':vcs_info:*' stagedstr '+'
+  zstyle ':vcs_info:git:*' formats '(%b%u%c) '
+  zstyle ':vcs_info:git:*' actionformats '(%b|%a%u%c)'
+
+  PROMPT=''
+  PROMPT=$PROMPT'%F{yellow}${vcs_info_msg_0_}'
+  PROMPT=$PROMPT'%B%F{'$user_color'}%n'
+  if [ -n "$SSH_CONNECTION" ]; then
+    PROMPT=$PROMPT'@%m'
+  fi
+  PROMPT=$PROMPT'%f:%F{magenta}%~%f$ %b'
+
+  # ls
+  if [ -x /usr/bin/dircolors ]; then
+    eval "$(dircolors -b)"
+    alias ls="ls --color=auto"
+  else
+    export CLICOLOR=1
+    export LSCOLORS=ExFxCxDxBxegedabagacad
+  fi
+
+  # grep
+  alias grep="grep --color=auto"
+  alias fgrep="fgrep --color=auto"
+  alias egrep="egrep --color=auto"
+fi
+unset color_shell
+
+# Environment
+export EDITOR="vim"
+export LESS="-f -i -g -M -R -X -F -x4 -z-2"
+
+[ -x "$(command -v fasd)" ] && eval "$(fasd --init auto)"
+[ -x ~/.zsh_aliases ] && source ~/.zsh_aliases
+
+unset has_brew

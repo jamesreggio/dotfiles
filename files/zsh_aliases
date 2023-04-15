@@ -13,20 +13,10 @@ alias pp="pbpaste"
 
 alias g="git"
 alias h="http"
-alias rl="rlwrap"
 alias rmrf="rm -rf"
 
-alias t="tmux"
-alias tat="tmux attach -t"
-
+alias c="f -e code"
 alias v="f -e vim"
-_fasd_bash_hook_cmd_complete v
-
-alias bn="rlwrap -a=false babel-node"
-alias hb="rlwrap -a=false hbase shell"
-
-alias dps="docker ps -a"
-alias dex="docker exec -it"
 
 [ -x "$(which colordiff)" ] && alias diff="colordiff"
 

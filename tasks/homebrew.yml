@@ -17,10 +17,9 @@
     state=present
 
 - name: install brews
-  with_dict: "{{ brews }}"
+  with_items: "{{ brews }}"
   homebrew: >
-    name={{ item.key }}
-    install_options={{ item.value }}
+    name={{ item }}
     state=latest
 
 - name: install casks
@@ -28,15 +27,3 @@
   homebrew_cask: >
     name={{ item }}
     state=present
-
-- name: create login items directory
-  file: >
-    path="{{ home }}/Library/LaunchAgents"
-    state=directory
-
-- name: link login items
-  with_items: "{{ login_items }}"
-  file: >
-    src=/usr/local/opt/{{ item }}/homebrew.mxcl.{{ item }}.plist
-    path="{{ home }}/Library/LaunchAgents/homebrew.mxcl.{{ item }}.plist"
-    state=link

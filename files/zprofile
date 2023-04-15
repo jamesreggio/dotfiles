@@ -1,0 +1,6 @@
+path=( /opt/homebrew/bin $path )
+path=( $path $HOME/bin )
+
+# Volta
+export VOLTA_HOME="$HOME/.volta"
+path=( "$VOLTA_HOME" $path )

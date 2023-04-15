@@ -1,9 +1,6 @@
 # Personal
-/TODO
 /NOTES
-/RESUME
 /test.*
-/.secrets
 
 # Mac OS X
 .DS_Store
@@ -18,6 +15,7 @@ Icon
 .TemporaryItems
 .Trashes
 .VolumeIcon.icns
+.com.apple.timemachine.donotpresent
 .AppleDB
 .AppleDesktop
 Network Trash Folder
@@ -25,25 +23,16 @@ Temporary Items
 .apdisk
 
 # vim
-[._]*.s[a-w][a-z]
-[._]s[a-w][a-z]
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-rt-v][a-z]
+[._]ss[a-gi-z]
+[._]sw[a-p]
 Session.vim
+Sessionx.vim
 .netrwhist
 *~
-
-# emacs
-*~
-\#*\#
-/.emacs.desktop
-/.emacs.desktop.lock
-*.elc
-auto-save-list
-tramp
-.\#*
-
-# Ruby
-/.ruby-version
-/.ruby-gemset
+[._]*.un~
 
 # Node
 npm-debug.log
