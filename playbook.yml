@@ -29,7 +29,6 @@
       bin: bin
       gitconfig:
       gitignore:
-      inputrc:
       iterm2:
       vim:
       vimrc:
