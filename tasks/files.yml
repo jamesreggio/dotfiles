@@ -1,23 +1,26 @@
 ---
-- name: stat files
-  with_dict: "{{ files }}"
-  stat: >
-    path="{{ home }}/{{ item.value or '.' + item.key }}"
-    follow=no
+- name: Stat dotfiles to determine if they need backing up
+  stat:
+    path: "{{ home }}/{{ item.value | default('.' + item.key, true) }}"
+    follow: false
+  loop: "{{ files | dict2items }}"
   register: files_stat
 
-- name: backup files
-  with_items: "{{ files_stat.results }}"
-  when: item.stat.exists and not item.stat.islnk
-  command: mv "{{ item.stat.path }}" "{{ base }}/backups/{{ item.item.key }}.{{ ansible_date_time.epoch }}"
+- name: Backup existing files that are not symlinks
+  command: >
+    mv "{{ item.stat.path }}" "{{ base }}/backups/{{ item.item.key }}.{{ ansible_date_time.epoch }}"
+  loop: "{{ files_stat.results }}"
+  when:
+    - item.stat.exists
+    - not item.stat.islnk
 
-- name: link files
-  with_dict: "{{ files }}"
-  file: >
-    src="{{ base }}/files/{{ item.key }}"
-    path="{{ home }}/{{ item.value or '.' + item.key }}"
-    state=link
+- name: Link dotfiles into home directory
+  file:
+    src: "{{ base }}/files/{{ item.key }}"
+    path: "{{ home }}/{{ item.value | default('.' + item.key, true) }}"
+    state: link
+  loop: "{{ files | dict2items }}"
 
-- name: set visibility
-  with_dict: "{{ visibility }}"
+- name: Set visibility for specified files
   command: chflags -h {{ item.value }} "{{ home }}/{{ item.key }}"
+  loop: "{{ visibility | dict2items }}"

@@ -16,8 +16,6 @@ HISTSIZE=100000
 SAVEHIST=100000
 PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
-# add some readline keys back
-
 # Completion
 [ -n "$has_brew" ] && fpath=( $(brew --prefix)/share/zsh/site-functions $fpath )
 zstyle ':completion:*' use-cache on
@@ -67,16 +65,11 @@ if [ -n "$color_shell" ]; then
     export CLICOLOR=1
     export LSCOLORS=ExFxCxDxBxegedabagacad
   fi
-
-  # grep
-  alias grep="grep --color=auto"
-  alias fgrep="fgrep --color=auto"
-  alias egrep="egrep --color=auto"
 fi
 unset color_shell
 
 # Environment
-export EDITOR="vim"
+export EDITOR="nvim"
 export LESS="-f -i -g -M -R -X -F -x4 -z-2"
 
 [ -x "$(command -v fasd)" ] && eval "$(fasd --init auto)"

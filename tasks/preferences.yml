@@ -1,11 +1,11 @@
 ---
-- name: set preferences
-  with_items: "{{ preferences }}"
+- name: Set macOS preferences
   shell: "{{ item }}"
+  loop: "{{ preferences }}"
 
-- name: restart services
-  with_items:
+- name: Restart relevant macOS services
+  command: killall {{ item }}
+  loop:
     - Dock
     - Finder
     - SystemUIServer
-  command: killall {{ item }}

@@ -5,27 +5,49 @@
     home: "{{ lookup('env', 'HOME') }}"
     user: "{{ lookup('env', 'USER') }}"
 
-    taps:
-      - homebrew/cask-fonts
+    taps: []
+
     brews:
       - ansible
-      - bash-completion
+      - bat
+      - cloc
       - colordiff
+      - exiftool
       - fasd
       - fnm
       - git
       - httpie
       - jq
-      - the_silver_searcher
+      - neovim
+      - postgresql@14
+      - ripgrep
       - tree
       - vim
       - wget
+
     casks:
+      - arc
+      # Broken package
+      # - copyclip
+      - descript
+      - figma
       - font-inconsolata-g
+      - granola
+      - graphiql
       - iterm2
+      - itermai
+      - linear-linear
+      - logitune
+      - loom
+      - notion-calendar
+      - screen-studio
+      - signal
+      - slack
+      - superwhisper
+      - vscodium
+      - whatsapp
 
     files:
-      agignore:
       bin: bin
       gitconfig:
       gitignore:
@@ -36,6 +58,7 @@
       zprofile:
       zsh_aliases:
       zshrc:
+
     visibility:
       bin: hidden
       src: hidden
@@ -49,8 +72,15 @@
       - defaults write "com.googlecode.iterm2" PrefsCustomFolder "{{ home }}/.iterm2"
 
   tasks:
-    - include: tasks/homebrew.yml
-    - include: tasks/files.yml
-    - include: tasks/vim.yml
-    - include: tasks/preferences.yml
+    - name: Import Homebrew tasks
+      import_tasks: tasks/homebrew.yml
+
+    - name: Import file management tasks
+      import_tasks: tasks/files.yml
+
+    - name: Import Vim setup tasks
+      import_tasks: tasks/vim.yml
+
+    - name: Import preference configuration tasks
+      import_tasks: tasks/preferences.yml
       when: lookup('env', 'PREFS') != '0'

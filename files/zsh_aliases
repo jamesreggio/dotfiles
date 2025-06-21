@@ -11,6 +11,7 @@ alias more="m"
 alias pc="pbcopy"
 alias pp="pbpaste"
 
+alias c="bat -p"
 alias g="git"
 alias h="http"
 alias rmrf="rm -rf"

@@ -1,29 +1,42 @@
 ---
-- name: stat homebrew
-  stat: path=/usr/local/bin/brew
+- name: Check for Homebrew installation
+  stat:
+    path: /usr/local/bin/brew
   register: brew_stat
 
-- name: install homebrew
+- name: Install Homebrew if not present
   shell: ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
   when: not brew_stat.stat.exists
 
-- name: update homebrew
-  homebrew: update_homebrew=yes
+- name: Update Homebrew
+  community.general.homebrew:
+    update_homebrew: yes
 
-- name: install taps
-  with_items: "{{ taps }}"
-  homebrew_tap: >
-    tap={{ item }}
-    state=present
+- name: Tap additional Homebrew repositories
+  community.general.homebrew_tap:
+    tap: "{{ item }}"
+    state: present
+  loop: "{{ taps }}"
 
-- name: install brews
-  with_items: "{{ brews }}"
-  homebrew: >
-    name={{ item }}
-    state=latest
+- name: Install Homebrew brews
+  community.general.homebrew:
+    name: "{{ item }}"
+    state: latest
+  loop: "{{ brews }}"
 
-- name: install casks
-  with_items: "{{ casks }}"
-  homebrew_cask: >
-    name={{ item }}
-    state=present
+- name: Install Homebrew casks (ignore harmless app-exists errors)
+  community.general.homebrew_cask:
+    name: "{{ item }}"
+    state: present
+  loop: "{{ casks }}"
+  register: cask_results
+  failed_when: false
+
+- name: Fail on unexpected cask install errors
+  fail:
+    msg: "Cask '{{ item.item }}' failed with: {{ item.msg }}"
+  loop: "{{ cask_results.results }}"
+  when:
+    - item.msg is defined
+    - "'already an App at' not in item.msg"
+    - item.msg | regex_search('(?i)error|failure|failed|couldn\'t|cannot')

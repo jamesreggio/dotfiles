@@ -1,9 +1,10 @@
 ---
-- name: clone Vundle
-  git: >
-    repo=https://github.com/VundleVim/Vundle.vim.git
-    dest={{ home }}/.vim/bundle/Vundle.vim
-    clone=yes
+- name: Clone Vundle
+  ansible.builtin.git:
+    repo: https://github.com/VundleVim/Vundle.vim.git
+    dest: "{{ home }}/.vim/bundle/Vundle.vim"
+    clone: yes
+    update: yes  # optional: ensures latest version if already cloned
 
-- name: install plugins
-  command: vim +PluginInstall +qall
+- name: Install Vim plugins via Vundle
+  ansible.builtin.command: vim +PluginInstall +qall
