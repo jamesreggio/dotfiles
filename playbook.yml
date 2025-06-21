@@ -12,13 +12,13 @@
       - bash-completion
       - colordiff
       - fasd
+      - fnm
       - git
       - httpie
       - jq
       - the_silver_searcher
       - tree
       - vim
-      - volta
       - wget
     casks:
       - font-inconsolata-g

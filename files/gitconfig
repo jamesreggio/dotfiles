@@ -5,10 +5,12 @@
 	excludesfile = ~/.gitignore
 [user]
 	name = James Reggio
-	email = james.reggio@gmail.com
+	email = jareggio@brex.com
 	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIP6y3xp5Mf8DfQzt15JEya+Eb4OaqDg0+0iArO18WzDm
 [github]
 	user = jamesreggio
+[init]
+	defaultBranch = main
 [gpg]
 	format = ssh
 [gpg "ssh"]
@@ -32,6 +34,7 @@
 	aa   = add -A
 	ap   = add -p
 	b    = branch
+	bd   = branch -D
 	bm   = branch -m
 	c    = commit
 	cf   = commit --no-verify
@@ -58,7 +61,6 @@
 	man  = help
 	p    = push
 	pf   = push --force
-	pa   = push --mirror
 	pu   = pull --ff-only
 	r    = reset
 	rr   = reset HEAD^

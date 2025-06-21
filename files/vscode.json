@@ -10,12 +10,7 @@
   "editor.formatOnSave": true,
 
   "diffEditor.ignoreTrimWhitespace": false,
-  "terminal.integrated.fontSize": 12,
-  "window.zoomLevel": 0,
-
-  "files.exclude": {
-    "**/*.sw*": false
-  },
+  "terminal.integrated.fontSize": 13,
 
   /**
    * Vim
@@ -99,5 +94,25 @@
    * Additional (unclassified) settings
    */
 
-  "editor.inlineSuggest.enabled": true
+  "editor.inlineSuggest.enabled": true,
+  "workbench.colorTheme": "Default Dark+ Experimental",
+  "editor.fontSize": 13,
+  "debug.console.fontSize": 13,
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "hidefiles.version": "2.0.0",
+  "explorer.sortOrder": "type",
+  "editor.autoClosingBrackets": "beforeWhitespace",
+  "editor.autoClosingQuotes": "beforeWhitespace",
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "vim.commandLineModeKeyBindings": []
 }

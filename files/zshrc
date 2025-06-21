@@ -80,6 +80,7 @@ export EDITOR="vim"
 export LESS="-f -i -g -M -R -X -F -x4 -z-2"
 
 [ -x "$(command -v fasd)" ] && eval "$(fasd --init auto)"
+[ -x "$(command -v fnm)" ] && eval "$(fnm env --use-on-cd)"
 [ -x ~/.zsh_aliases ] && source ~/.zsh_aliases
 
 unset has_brew

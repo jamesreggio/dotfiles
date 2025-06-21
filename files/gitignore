@@ -1,8 +1,4 @@
-# Personal
-/NOTES
-/test.*
-
-# Mac OS X
+# macOS
 .DS_Store
 .AppleDouble
 .LSOverride
@@ -34,5 +30,8 @@ Sessionx.vim
 *~
 [._]*.un~
 
-# Node
+# node
 npm-debug.log
+
+# claude
+.claude
