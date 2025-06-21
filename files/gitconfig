@@ -1,7 +1,7 @@
 [protocol]
 	version = 2
 [core]
-	editor = vim
+	editor = nvim
 	excludesfile = ~/.gitignore
 [user]
 	name = James Reggio

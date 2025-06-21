@@ -8,16 +8,17 @@ alias ll="l"
 alias m="less"
 alias more="m"
 
-alias pc="pbcopy"
-alias pp="pbpaste"
+alias pbc="pbcopy"
+alias pbp="pbpaste"
 
-alias c="bat -p"
+alias b="bat -p"
 alias g="git"
 alias h="http"
 alias rmrf="rm -rf"
 
 alias c="f -e code"
-alias v="f -e vim"
+alias v="f -e nvim"
+alias vim="nvim"
 
 [ -x "$(which colordiff)" ] && alias diff="colordiff"
 

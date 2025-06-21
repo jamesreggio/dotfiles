@@ -31,7 +31,8 @@
       # - copyclip
       - descript
       - figma
-      - font-inconsolata-g
+      - font-fira-code-nerd-font
+      - font-jetbrains-mono-nerd-font
       - granola
       - graphiql
       - iterm2
@@ -49,11 +50,10 @@
 
     files:
       bin: bin
+      config:
       gitconfig:
       gitignore:
       iterm2:
-      vim:
-      vimrc:
       vscode.json: Library/Application Support/Code/User/settings.json
       zprofile:
       zsh_aliases:
@@ -77,9 +77,6 @@
 
     - name: Import file management tasks
       import_tasks: tasks/files.yml
-
-    - name: Import Vim setup tasks
-      import_tasks: tasks/vim.yml
 
     - name: Import preference configuration tasks
       import_tasks: tasks/preferences.yml

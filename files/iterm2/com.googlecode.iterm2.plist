@@ -807,7 +807,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>Inconsolata-g 15</string>
+			<string>FiraCodeNF-Ret 16</string>
 			<key>Option Key Sends</key>
 			<integer>2</integer>
 			<key>Prompt Before Closing 2</key>
@@ -962,6 +962,8 @@
 			<array/>
 			<key>Terminal Type</key>
 			<string>screen-256color</string>
+			<key>Thin Strokes</key>
+			<integer>4</integer>
 			<key>Transparency</key>
 			<real>0.0</real>
 			<key>Triggers</key>
@@ -979,7 +981,7 @@
 			<key>Use Non-ASCII Font</key>
 			<false/>
 			<key>Vertical Spacing</key>
-			<real>1</real>
+			<real>1.1200000000000001</real>
 			<key>Visual Bell</key>
 			<false/>
 			<key>Window Type</key>
